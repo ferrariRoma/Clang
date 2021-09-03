@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B22629126DF3B76008C2A62 /* head_initialization.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B22629026DF3B76008C2A62 /* head_initialization.c */; };
+		1B649E8A26E0CF4E00B34F21 /* head_init_review.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B649E8926E0CF4E00B34F21 /* head_init_review.c */; };
 		1B85B3E426DF1E1600DECA5E /* linkedlist_remove.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B3E326DF1E1600DECA5E /* linkedlist_remove.c */; };
 		1B85B3EB26DF1E8F00DECA5E /* malloc_and_List.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B3EA26DF1E8F00DECA5E /* malloc_and_List.c */; };
 		1B85B3ED26DF1EE700DECA5E /* linkedlist_practice.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B3EC26DF1EE700DECA5E /* linkedlist_practice.c */; };
@@ -28,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1B22629026DF3B76008C2A62 /* head_initialization.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = head_initialization.c; sourceTree = "<group>"; };
+		1B649E8926E0CF4E00B34F21 /* head_init_review.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = head_init_review.c; sourceTree = "<group>"; };
 		1B85B3E026DF1E1600DECA5E /* codingdojang */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = codingdojang; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B85B3E326DF1E1600DECA5E /* linkedlist_remove.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = linkedlist_remove.c; sourceTree = "<group>"; };
 		1B85B3EA26DF1E8F00DECA5E /* malloc_and_List.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = malloc_and_List.c; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 				1B85B3EE26DF1F2700DECA5E /* linkedlist.c */,
 				1B85B3F026DF1F6500DECA5E /* loopProject.c */,
 				1B85B3F226DF1F9000DECA5E /* selfstudy_if.c */,
+				1B22629026DF3B76008C2A62 /* head_initialization.c */,
+				1B649E8926E0CF4E00B34F21 /* head_init_review.c */,
 			);
 			path = codingdojang;
 			sourceTree = "<group>";
@@ -133,9 +139,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B649E8A26E0CF4E00B34F21 /* head_init_review.c in Sources */,
 				1B85B3F126DF1F6500DECA5E /* loopProject.c in Sources */,
 				1B85B3E426DF1E1600DECA5E /* linkedlist_remove.c in Sources */,
 				1B85B3F326DF1F9000DECA5E /* selfstudy_if.c in Sources */,
+				1B22629126DF3B76008C2A62 /* head_initialization.c in Sources */,
 				1B85B3EB26DF1E8F00DECA5E /* malloc_and_List.c in Sources */,
 				1B85B3EF26DF1F2700DECA5E /* linkedlist.c in Sources */,
 				1B85B3ED26DF1EE700DECA5E /* linkedlist_practice.c in Sources */,

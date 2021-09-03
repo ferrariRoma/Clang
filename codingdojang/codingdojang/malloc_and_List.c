@@ -11,19 +11,19 @@
     int data;  // 데이터를 저장할 멤버
 } node; */
 
-struct NODE{  //연결 리스트의 노드 구조체
-    struct NODE *next;  // 다음 노드의 주소를 저장할 포인터
-    int data;  // 데이터를 저장할 멤버
-};
-
-void addFirst(struct NODE *target, int data)
-{
-    struct NODE *newNode = malloc(sizeof(struct NODE));
-    newNode->next = target->next;
-    newNode->data = data;
-
-    target->next = newNode;
-}
+//struct NODE{  //연결 리스트의 노드 구조체
+//    struct NODE *next;  // 다음 노드의 주소를 저장할 포인터
+//    int data;  // 데이터를 저장할 멤버
+//};
+//
+//void addFirst(struct NODE *target, int data)
+//{
+//    struct NODE *newNode = malloc(sizeof(struct NODE));
+//    newNode->next = target->next;
+//    newNode->data = data;
+//
+//    target->next = newNode;
+//}
 
 
 
@@ -345,32 +345,32 @@ int main_malloc()
 
 
 
-    struct NODE *head = malloc(sizeof(struct NODE));
-
-    head->next = NULL;  // 머리 노드의 다음 노드는 없으므로 NULL!
-
-    addFirst(head, 10);  // 머리노드 뒤에 새 노드 저장
-    addFirst(head, 20);
-    addFirst(head, 30);
-
-    struct NODE *curr = head->next;  // 순회용 포인터에 첫번째 노드의 주소 저장
-    while(curr != NULL)  // 포인터가 NULL이 아닐 때 계속 반복
-    {
-        printf("%d ", curr->data);
-        curr = curr->next;
-    }
-    printf("\n");
-
-
-    curr = head->next;
-    while(curr != NULL)
-    {
-        struct NODE *next = curr->next;  // 현재 노드의 다음 주소를 임시로 저장
-        free(curr);  // 현재 노드의 메모리를 해제~
-        curr = next;
-    }
-    
-    free(head);  // 머리 노드 메모리 해제
+//    struct NODE *head = malloc(sizeof(struct NODE));
+//
+//    head->next = NULL;  // 머리 노드의 다음 노드는 없으므로 NULL!
+//
+//    addFirst(head, 10);  // 머리노드 뒤에 새 노드 저장
+//    addFirst(head, 20);
+//    addFirst(head, 30);
+//
+//    struct NODE *curr = head->next;  // 순회용 포인터에 첫번째 노드의 주소 저장
+//    while(curr != NULL)  // 포인터가 NULL이 아닐 때 계속 반복
+//    {
+//        printf("%d ", curr->data);
+//        curr = curr->next;
+//    }
+//    printf("\n");
+//
+//
+//    curr = head->next;
+//    while(curr != NULL)
+//    {
+//        struct NODE *next = curr->next;  // 현재 노드의 다음 주소를 임시로 저장
+//        free(curr);  // 현재 노드의 메모리를 해제~
+//        curr = next;
+//    }
+//    
+//    free(head);  // 머리 노드 메모리 해제
 
     // 다음 주소를 임시로 저장해두는 이유는
     // 현재 노드의 메모리를 먼저 해제해버리면 curr->next에

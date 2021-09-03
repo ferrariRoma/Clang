@@ -5,44 +5,44 @@
 #include <stdlib.h>
 
 
-typedef struct NODE{
-    struct NODE *next;
-    int data;
-}node;
-
-void addFirst(node *target,int data)
-{
-    if(target == NULL)  // 헤드노드가 NULL이면
-        return;  // 함수를 끝냄.
-
-    node *newNode = malloc(sizeof(node));
-    if(newNode == NULL)  // 메모리 할당에 실패하면
-        return;  // 함수를 끝냄.
-
-    newNode->next=target->next;
-    newNode->data=data;
-
-    target->next=newNode;
-}
-
-void removeFirst(node *target)
-{
-    if(target == NULL)  // 헤드노드가 NULL이면
-        return;  // 함수를 끝냄.
-
-    // head node1 node2 node3 NULL 순서라고 가정한다면
-    node *removeNode=target->next;  // node1을 가리키는 주소를 넣어주고
-    if(removeFirst == NULL)  // 삭제할 노드가 NULL이면
-        return;  // 함수종료.
-    target->next=removeNode->next;  // target->next=node2주소
-
-    free(removeNode);  // node1 메모리 해제
+//typedef struct NODE{
+//    struct NODE *next;
+//    int data;
+//}node;
+//
+//void addFirst(node *target,int data)
+//{
+//    if(target == NULL)  // 헤드노드가 NULL이면
+//        return;  // 함수를 끝냄.
+//
+//    node *newNode = malloc(sizeof(node));
+//    if(newNode == NULL)  // 메모리 할당에 실패하면
+//        return;  // 함수를 끝냄.
+//
+//    newNode->next=target->next;
+//    newNode->data=data;
+//
+//    target->next=newNode;
+//}
+//
+//void removeFirst(node *target)
+//{
+//    if(target == NULL)  // 헤드노드가 NULL이면
+//        return;  // 함수를 끝냄.
+//
+//    // head node1 node2 node3 NULL 순서라고 가정한다면
+//    node *removeNode=target->next;  // node1을 가리키는 주소를 넣어주고
+//    if(removeFirst == NULL)  // 삭제할 노드가 NULL이면
+//        return;  // 함수종료.
+//    target->next=removeNode->next;  // target->next=node2주소
+//
+//    free(removeNode);  // node1 메모리 해제
     // 노드 추가 함수에서 마지막에 반복문을 통해 메모리 해제할 때처럼
     // node1을 삭제시켜버리면 head와의 연결고리가 끊어지는 것이므로
     // node1의 주소를 포인터 removeNode에 저장시켜두고
     // 저장된 node1의 주소를 이용하여 head와 node2를 이어준 다음
     // node1의 메모리를 해제!
-}
+//}
 
 int main_linkedlist()
 {
@@ -126,33 +126,33 @@ int main_linkedlist()
     // 노드 삭제 함수는 특정 노드를 삭제하고 남은 노드를
     // 서로 연결시켜주는 방식임.
 
-    node *head = malloc(sizeof(node));  // 헤드노드 설정
-    head->next = NULL;  // 헤드노드 다음은 아직까지는 NULL임~
-
-    addFirst(head,10);  // 노드 추가 함수를 사용해서 3개의 노드를 추가
-    addFirst(head,20);
-    addFirst(head,30);
-
-    removeFirst(head);  // 헤드노드 뒤에 있는 노드를 지워주세요! 30 날라가겠지?
-
-    node *curr = head->next;  // 노드 순환용 포인터curr에 첫번째 노드 주소 할당
-    while(curr != NULL)
-    {
-        printf("%d ", curr->data);  // 정말로 삭제가 되었는지 확인을 해보자.
-        curr = curr->next;
-    }
-    printf("\n");
-
-    // 나머지 노드들의 메모리 해제 절차
-    curr = head->next;  // 다시 포인터에 첫번째 노드 주소 저장. 20주소겠지?
-    while(curr != NULL)
-    {
-        node *next = curr->next;  // 20을 날리기 전에 10의 주소를 next에 저장
-        free(curr);
-        curr = next;  // 10의 주소를 저장.
-    }
-
-    free(head);
+//    node *head = malloc(sizeof(node));  // 헤드노드 설정
+//    head->next = NULL;  // 헤드노드 다음은 아직까지는 NULL임~
+//
+//    addFirst(head,10);  // 노드 추가 함수를 사용해서 3개의 노드를 추가
+//    addFirst(head,20);
+//    addFirst(head,30);
+//
+//    removeFirst(head);  // 헤드노드 뒤에 있는 노드를 지워주세요! 30 날라가겠지?
+//
+//    node *curr = head->next;  // 노드 순환용 포인터curr에 첫번째 노드 주소 할당
+//    while(curr != NULL)
+//    {
+//        printf("%d ", curr->data);  // 정말로 삭제가 되었는지 확인을 해보자.
+//        curr = curr->next;
+//    }
+//    printf("\n");
+//
+//    // 나머지 노드들의 메모리 해제 절차
+//    curr = head->next;  // 다시 포인터에 첫번째 노드 주소 저장. 20주소겠지?
+//    while(curr != NULL)
+//    {
+//        node *next = curr->next;  // 20을 날리기 전에 10의 주소를 next에 저장
+//        free(curr);
+//        curr = next;  // 10의 주소를 저장.
+//    }
+//
+//    free(head);
 
 
     /*
