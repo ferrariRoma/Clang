@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B21720226E32F1C00848D44 /* function.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B21720126E32F1C00848D44 /* function.c */; };
 		1B85B40126DF203200DECA5E /* array_example.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B40026DF203200DECA5E /* array_example.c */; };
 		1B85B40826DF206900DECA5E /* loop_practice.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B40726DF206900DECA5E /* loop_practice.c */; };
 		1B85B40A26DF209400DECA5E /* beat_practice.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B40926DF209400DECA5E /* beat_practice.c */; };
@@ -27,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1B21720126E32F1C00848D44 /* function.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = function.c; sourceTree = "<group>"; };
 		1B85B3FD26DF203200DECA5E /* 열혈C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "열혈C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B85B40026DF203200DECA5E /* array_example.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = array_example.c; sourceTree = "<group>"; };
 		1B85B40726DF206900DECA5E /* loop_practice.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = loop_practice.c; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				1B85B40926DF209400DECA5E /* beat_practice.c */,
 				1B85B40B26DF20C300DECA5E /* pointer_practice.c */,
 				1B85B40D26DF20F700DECA5E /* loopstatement.c */,
+				1B21720126E32F1C00848D44 /* function.c */,
 			);
 			path = "열혈C";
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 				1B85B40A26DF209400DECA5E /* beat_practice.c in Sources */,
 				1B85B40E26DF20F700DECA5E /* loopstatement.c in Sources */,
 				1B85B40126DF203200DECA5E /* array_example.c in Sources */,
+				1B21720226E32F1C00848D44 /* function.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
