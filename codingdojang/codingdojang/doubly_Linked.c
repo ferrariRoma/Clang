@@ -38,7 +38,7 @@ node *newNode(int number)
 {
     node *curr=head->next;
     // 기준노드의 멤버값이 작은 동안에만 반복, 같거나 기존노드가 더 커지면 탈출
-    while(curr->num<number && curr!=NULL){
+    while(curr->num<number && curr!=tail){
         curr=curr->next;
     }
     node *newNode=malloc(sizeof(node));
@@ -102,6 +102,7 @@ node *getNode(int number, int standard)
 int main(void)
 {
     int num=0;
+    int num2=0;
     int answer[5]={0,};
     initNode();  // 노드 초기화
     node *newOne=NULL;
@@ -111,7 +112,10 @@ int main(void)
         scanf("%d ",answer+i);
         newOne=newNode(*(answer+i));
     }
+    getchar();
+    fflush(stdin);
     
+    printf("\n\n최초 출력을 해봅시다.\n");
     node *curr=head->next;
     while(curr!=tail){
         printf("%d ", curr->num);
@@ -132,6 +136,21 @@ int main(void)
         printf("%d ", curr->num);
         curr=curr->next;
     }
+    
+    printf("\n\n이번에는 오름차순 말고 특정 수 앞에 새로운 숫자를 넣어보도록 하자!\n");
+    printf("무슨 수 앞에 넣을까요? : ");
+    scanf("%d", &num2);
+    printf("무슨 수를 넣을까요? : ");
+    scanf("%d", &num);
+    
+    newOne=getNode(num, num2);
+    printf("\n추가시킨 결과를 한 번 확인해볼게요!\n");
+    curr=head->next;
+    while(curr!=tail){
+        printf("%d ", curr->num);
+        curr=curr->next;
+    }
+    
     
     printf("\n노드를 메모리를 해제할 시간이에요.\n");
     curr=head->next;
