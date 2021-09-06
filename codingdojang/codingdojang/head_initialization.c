@@ -22,7 +22,7 @@ typedef struct top{
 }top;
 
 // 노드 생성함수
-node *getNode()
+node *getNode_head_init()
 {
     node *newnode=malloc(sizeof(node));
     newnode->next=NULL;
@@ -31,10 +31,10 @@ node *getNode()
 }
 
 // 헤드 노드 생성 및 초기화
-top *initNode()
+top *initNode_head_init()
 {
     top *list=malloc(sizeof(top));
-    list->head=getNode();  // node *head=NULL;
+    list->head=getNode_head_init();  // node *head=NULL;
 
     return list;
 }
@@ -42,7 +42,7 @@ top *initNode()
 // 새 노드를 생성하고 삽입하는 함수
 void insert(top *list, char name[])
 {
-    node *newnode=getNode();
+    node *newnode=getNode_head_init();
     stpcpy(newnode->nameTable, name);
 
     if(list->head->next==NULL){
@@ -122,9 +122,9 @@ void printNode(top *list)
 }
 
 
-int main(void)
+int main_init(void)
 {
-    top *head=initNode();
+    top *head=initNode_head_init();
     insert(head, "짜장면");
     insert(head, "팔보채");
     insert(head, "탕수육");
