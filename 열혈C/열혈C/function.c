@@ -97,7 +97,7 @@ void fibo(int answer)
 }
 
 
-int main(void)
+int main_function(void)
 {
     // return은 두 가지 의미를 갖는다.
     // 하나는 함수를 빠져나간다는 것이고 다른 하나는 말 그대로 값을 반환해주는 것이다.
