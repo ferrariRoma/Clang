@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 
-int main(void)
+int main_marray_basic(void)
 {
     // 다차원 배열 복습
     

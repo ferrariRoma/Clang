@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B830A6C26E8D19000338A04 /* marray_project.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B830A6B26E8D19000338A04 /* marray_project.c */; };
 		1B85B41C26DF213300DECA5E /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B41B26DF213300DECA5E /* array.c */; };
 		1B85B42526DF21A500DECA5E /* loop.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B42426DF21A500DECA5E /* loop.c */; };
 		1B85B42726DF21E000DECA5E /* printf.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B42626DF21E000DECA5E /* printf.c */; };
+		1B97E22126E749B30090E874 /* marray_basic.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B97E22026E749B30090E874 /* marray_basic.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +27,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1B830A6B26E8D19000338A04 /* marray_project.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = marray_project.c; sourceTree = "<group>"; };
 		1B85B41826DF213300DECA5E /* nado_review */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nado_review; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B85B41B26DF213300DECA5E /* array.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = array.c; sourceTree = "<group>"; };
 		1B85B42426DF21A500DECA5E /* loop.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = loop.c; sourceTree = "<group>"; };
 		1B85B42626DF21E000DECA5E /* printf.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = printf.c; sourceTree = "<group>"; };
+		1B97E22026E749B30090E874 /* marray_basic.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = marray_basic.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				1B85B41B26DF213300DECA5E /* array.c */,
 				1B85B42426DF21A500DECA5E /* loop.c */,
 				1B85B42626DF21E000DECA5E /* printf.c */,
+				1B97E22026E749B30090E874 /* marray_basic.c */,
+				1B830A6B26E8D19000338A04 /* marray_project.c */,
 			);
 			path = nado_review;
 			sourceTree = "<group>";
@@ -124,9 +130,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B830A6C26E8D19000338A04 /* marray_project.c in Sources */,
 				1B85B41C26DF213300DECA5E /* array.c in Sources */,
 				1B85B42526DF21A500DECA5E /* loop.c in Sources */,
 				1B85B42726DF21E000DECA5E /* printf.c in Sources */,
+				1B97E22126E749B30090E874 /* marray_basic.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
