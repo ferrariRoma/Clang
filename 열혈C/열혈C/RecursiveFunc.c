@@ -52,7 +52,7 @@ void addArrayElem(int *param, int len, int add)
     }
 }
 
-int main(void)
+int main_RecursiveFunc(void)
 {
 //    Recursive(3);
 //    printf("\n");

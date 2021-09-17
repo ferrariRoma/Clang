@@ -14,6 +14,7 @@
 		1B85B40A26DF209400DECA5E /* beat_practice.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B40926DF209400DECA5E /* beat_practice.c */; };
 		1B85B40C26DF20C300DECA5E /* pointer_practice.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B40B26DF20C300DECA5E /* pointer_practice.c */; };
 		1B85B40E26DF20F700DECA5E /* loopstatement.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B40D26DF20F700DECA5E /* loopstatement.c */; };
+		1BBA0B8B26F364AD00ADFF2D /* DarrAccess.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BBA0B8A26F364AD00ADFF2D /* DarrAccess.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		1B85B40926DF209400DECA5E /* beat_practice.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = beat_practice.c; sourceTree = "<group>"; };
 		1B85B40B26DF20C300DECA5E /* pointer_practice.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pointer_practice.c; sourceTree = "<group>"; };
 		1B85B40D26DF20F700DECA5E /* loopstatement.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = loopstatement.c; sourceTree = "<group>"; };
+		1BBA0B8A26F364AD00ADFF2D /* DarrAccess.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DarrAccess.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				1B85B40D26DF20F700DECA5E /* loopstatement.c */,
 				1B21720126E32F1C00848D44 /* function.c */,
 				1B5B70CF26E70B65009895D6 /* RecursiveFunc.c */,
+				1BBA0B8A26F364AD00ADFF2D /* DarrAccess.c */,
 			);
 			path = "열혈C";
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			files = (
 				1B85B40C26DF20C300DECA5E /* pointer_practice.c in Sources */,
 				1B85B40826DF206900DECA5E /* loop_practice.c in Sources */,
+				1BBA0B8B26F364AD00ADFF2D /* DarrAccess.c in Sources */,
 				1B5B70D026E70B65009895D6 /* RecursiveFunc.c in Sources */,
 				1B85B40A26DF209400DECA5E /* beat_practice.c in Sources */,
 				1B85B40E26DF20F700DECA5E /* loopstatement.c in Sources */,
