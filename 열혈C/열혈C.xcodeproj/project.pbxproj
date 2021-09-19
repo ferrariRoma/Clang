@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B21720226E32F1C00848D44 /* function.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B21720126E32F1C00848D44 /* function.c */; };
+		1B280CF126F5C0B9005F96AD /* arrRotate.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B280CF026F5C0B9005F96AD /* arrRotate.c */; };
 		1B5B70D026E70B65009895D6 /* RecursiveFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B5B70CF26E70B65009895D6 /* RecursiveFunc.c */; };
 		1B85B40126DF203200DECA5E /* array_example.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B40026DF203200DECA5E /* array_example.c */; };
 		1B85B40826DF206900DECA5E /* loop_practice.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B40726DF206900DECA5E /* loop_practice.c */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		1B21720126E32F1C00848D44 /* function.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = function.c; sourceTree = "<group>"; };
+		1B280CF026F5C0B9005F96AD /* arrRotate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = arrRotate.c; sourceTree = "<group>"; };
 		1B5B70CF26E70B65009895D6 /* RecursiveFunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = RecursiveFunc.c; sourceTree = "<group>"; };
 		1B85B3FD26DF203200DECA5E /* 열혈C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "열혈C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B85B40026DF203200DECA5E /* array_example.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = array_example.c; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				1B5B70CF26E70B65009895D6 /* RecursiveFunc.c */,
 				1BBA0B8A26F364AD00ADFF2D /* DarrAccess.c */,
 				1BF16B6E26F4B3DA00DB9843 /* functionPointer.c */,
+				1B280CF026F5C0B9005F96AD /* arrRotate.c */,
 			);
 			path = "열혈C";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				1B85B40C26DF20C300DECA5E /* pointer_practice.c in Sources */,
 				1B85B40826DF206900DECA5E /* loop_practice.c in Sources */,
+				1B280CF126F5C0B9005F96AD /* arrRotate.c in Sources */,
 				1BBA0B8B26F364AD00ADFF2D /* DarrAccess.c in Sources */,
 				1B5B70D026E70B65009895D6 /* RecursiveFunc.c in Sources */,
 				1BF16B6F26F4B3DA00DB9843 /* functionPointer.c in Sources */,
