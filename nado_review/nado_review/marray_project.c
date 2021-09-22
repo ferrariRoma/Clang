@@ -18,7 +18,7 @@ void question();
 int finish();
 
 
-int main(void)
+int main_marray_project(void)
 {
     int failCount=0;  // int counting the number of fail.
     srand((unsigned int)time(NULL));  // 랜덤 초기화
