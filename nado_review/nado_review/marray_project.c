@@ -14,7 +14,7 @@ int randPos();  // 비어있는 위치를 할당
 int convX(int num);
 int convY(int num);
 void preview();
-void question();
+void questiona();
 int finish();
 
 
@@ -38,7 +38,7 @@ int main_marray_project(void)
         preview();
         sleep(5);  // 잠시 대기. <unistd.h> 불러주어야 한다.
         printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-        question();
+        questiona();
         printf("\n\n같은 카드 2장을 골라주세요!\n");
         scanf("%d %d", &select1, &select2);
         printf("입력 번호 확인 : %d, %d\n", select1, select2);
@@ -149,7 +149,7 @@ void preview()
     }
 }
 
-void question()
+void questiona()
 {
     printf("\n\n\n");
     int number=0;
