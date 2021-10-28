@@ -16,7 +16,7 @@ int name_cmp(char *name1, char *name2);
 int checkout_space(char *space);
 int age_cmp(char *age1, char *age2);
 
-int main(void) {
+int main_string_cmp(void) {
     char str1[max];
     char str2[max];
     int i=0,j=0;
