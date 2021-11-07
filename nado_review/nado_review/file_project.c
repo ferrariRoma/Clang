@@ -13,7 +13,7 @@
 
 int CheckPassword();
 
-int main()
+int main_file_project()
 {
     FILE *wtfile = fopen("/Users/andong-gyu/Documents/develope/C language/nadocoding/nado_review/txtfile/diary.txt","at");
     FILE *rtfile = fopen("/Users/andong-gyu/Documents/develope/C language/nadocoding/nado_review/txtfile/diary.txt","rt");

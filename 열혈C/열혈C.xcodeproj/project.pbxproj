@@ -11,6 +11,7 @@
 		1B21720226E32F1C00848D44 /* function.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B21720126E32F1C00848D44 /* function.c */; };
 		1B280CF126F5C0B9005F96AD /* arrRotate.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B280CF026F5C0B9005F96AD /* arrRotate.c */; };
 		1B2E03682731262000300186 /* struct_variable.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E03672731262000300186 /* struct_variable.c */; };
+		1B4DD14F273577FB00885577 /* textdatefilewrite.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B4DD14E273577FB00885577 /* textdatefilewrite.c */; };
 		1B5B70D026E70B65009895D6 /* RecursiveFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B5B70CF26E70B65009895D6 /* RecursiveFunc.c */; };
 		1B85B40126DF203200DECA5E /* array_example.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B40026DF203200DECA5E /* array_example.c */; };
 		1B85B40826DF206900DECA5E /* loop_practice.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B40726DF206900DECA5E /* loop_practice.c */; };
@@ -40,6 +41,7 @@
 		1B21720126E32F1C00848D44 /* function.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = function.c; sourceTree = "<group>"; };
 		1B280CF026F5C0B9005F96AD /* arrRotate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = arrRotate.c; sourceTree = "<group>"; };
 		1B2E03672731262000300186 /* struct_variable.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = struct_variable.c; sourceTree = "<group>"; };
+		1B4DD14E273577FB00885577 /* textdatefilewrite.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = textdatefilewrite.c; sourceTree = "<group>"; };
 		1B5B70CF26E70B65009895D6 /* RecursiveFunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = RecursiveFunc.c; sourceTree = "<group>"; };
 		1B85B3FD26DF203200DECA5E /* 열혈C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "열혈C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B85B40026DF203200DECA5E /* array_example.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = array_example.c; sourceTree = "<group>"; };
@@ -67,7 +69,6 @@
 		1B85B3F426DF203200DECA5E = {
 			isa = PBXGroup;
 			children = (
-				1B2E03672731262000300186 /* struct_variable.c */,
 				1B85B3FF26DF203200DECA5E /* 열혈C */,
 				1B85B3FE26DF203200DECA5E /* Products */,
 			);
@@ -84,6 +85,7 @@
 		1B85B3FF26DF203200DECA5E /* 열혈C */ = {
 			isa = PBXGroup;
 			children = (
+				1B2E03672731262000300186 /* struct_variable.c */,
 				1B85B40026DF203200DECA5E /* array_example.c */,
 				1B85B40726DF206900DECA5E /* loop_practice.c */,
 				1B85B40926DF209400DECA5E /* beat_practice.c */,
@@ -97,6 +99,7 @@
 				1BF255EC26F776F900772205 /* readWriteChar.c */,
 				1B05839C271329DA00520F45 /* question_string_cmp.c */,
 				1BBAA2652729CDE8005A8590 /* struct_array.c */,
+				1B4DD14E273577FB00885577 /* textdatefilewrite.c */,
 			);
 			path = "열혈C";
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				1BF16B6F26F4B3DA00DB9843 /* functionPointer.c in Sources */,
 				1B85B40A26DF209400DECA5E /* beat_practice.c in Sources */,
 				1B85B40E26DF20F700DECA5E /* loopstatement.c in Sources */,
+				1B4DD14F273577FB00885577 /* textdatefilewrite.c in Sources */,
 				1B85B40126DF203200DECA5E /* array_example.c in Sources */,
 				1B21720226E32F1C00848D44 /* function.c in Sources */,
 			);
