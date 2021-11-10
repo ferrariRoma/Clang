@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B05839D271329DA00520F45 /* question_string_cmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B05839C271329DA00520F45 /* question_string_cmp.c */; };
+		1B13A87B273C08D600C36DEF /* text-string-file-copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B13A87A273C08D600C36DEF /* text-string-file-copy.c */; };
 		1B21720226E32F1C00848D44 /* function.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B21720126E32F1C00848D44 /* function.c */; };
 		1B280CF126F5C0B9005F96AD /* arrRotate.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B280CF026F5C0B9005F96AD /* arrRotate.c */; };
 		1B2E03682731262000300186 /* struct_variable.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E03672731262000300186 /* struct_variable.c */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		1B05839C271329DA00520F45 /* question_string_cmp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = question_string_cmp.c; sourceTree = "<group>"; };
+		1B13A87A273C08D600C36DEF /* text-string-file-copy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "text-string-file-copy.c"; sourceTree = "<group>"; };
 		1B21720126E32F1C00848D44 /* function.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = function.c; sourceTree = "<group>"; };
 		1B280CF026F5C0B9005F96AD /* arrRotate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = arrRotate.c; sourceTree = "<group>"; };
 		1B2E03672731262000300186 /* struct_variable.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = struct_variable.c; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				1BBAA2652729CDE8005A8590 /* struct_array.c */,
 				1B4DD14E273577FB00885577 /* text-datafile-write.c */,
 				1B578B93273A1BEC00009F29 /* question-twenty-three-two.c */,
+				1B13A87A273C08D600C36DEF /* text-string-file-copy.c */,
 			);
 			path = "열혈C";
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				1B5B70D026E70B65009895D6 /* recursive_func.c in Sources */,
 				1BF16B6F26F4B3DA00DB9843 /* functionPointer.c in Sources */,
 				1B85B40A26DF209400DECA5E /* beat_practice.c in Sources */,
+				1B13A87B273C08D600C36DEF /* text-string-file-copy.c in Sources */,
 				1B85B40E26DF20F700DECA5E /* loopstatement.c in Sources */,
 				1B4DD14F273577FB00885577 /* text-datafile-write.c in Sources */,
 				1B85B40126DF203200DECA5E /* array_example.c in Sources */,

@@ -4,9 +4,6 @@
 //
 //  Created by 안동규 on 2021/11/09.
 //  열혈 488p 문제
-//  잘 나타내었지만 문제에서는 구조체Point를 이용하여
-//  구조체Rectangle을 정의하라고 하였음.
-//  그리고 그걸 통하여 위치를 구하는 것이기 때문에 오답임.
 
 typedef struct point {
     int xpos;
@@ -17,6 +14,9 @@ typedef struct rectangle {
     Point ul;  // 좌상단
     Point lr;  // 우하단
 } Rectangle;
+//  잘 나타내었지만 문제에서는 구조체Point를 이용하여
+//  구조체Rectangle을 정의하라고 하였음.
+//  그리고 그걸 통하여 위치를 구하는 것이기 때문에 오답임.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,7 +24,7 @@ typedef struct rectangle {
 int GetSize(Point spot1, Point spot2);
 void GetEachPoint(Point point1,Point point2);
 
-int main()
+int main_question_twenty_three_two()
 {
     int x=0, y=0, size;
     Point pos1;
@@ -38,9 +38,16 @@ int main()
 //    GetEachPoint(pos1,pos2);
 //    printf("\n\n사각형의 크기 : %d\n\n",size);
 //
-    Rectangle angle1={{1,1},{5,3}};
+    Rectangle angle1={
+        {1,1},
+        {5,3}
+    };
     
-    printf("\n\n(%d,%d)\n(%d,%d)\n(%d,%d)\n(%d,%d)\n\n",angle1.ul.xpos,angle1.ul.ypos,angle1.ul.ypos,angle1.lr.xpos,angle1.lr.xpos,angle1.lr.ypos,angle1.ul.xpos,angle1.lr.ypos);
+    printf("\n\n(%d,%d)\n(%d,%d)\n(%d,%d)\n(%d,%d)\n\n",
+           angle1.ul.xpos,angle1.ul.ypos,
+           angle1.ul.ypos,angle1.lr.xpos,
+           angle1.lr.xpos,angle1.lr.ypos,
+           angle1.ul.xpos,angle1.lr.ypos);
     // 위의 사각형을 기반으로 해야함!
     
     return 0;
