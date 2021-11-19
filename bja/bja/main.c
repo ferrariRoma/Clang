@@ -94,10 +94,56 @@ int main() {
 //    }
     
     // 8393
-    int i, sum=0;
-    scanf("%d", &i);
-    for(int j=0;j<=i;j++)
-        sum +=j;
-    printf("%d",sum);
+//    int i, sum=0;
+//    scanf("%d", &i);
+//    for(int j=0;j<=i;j++)
+//        sum +=j;
+//    printf("%d",sum);
+    
+    // 15552
+//    int i;
+//    int num1, num2;
+//    scanf("%d", &i);
+//    for(int j=0;j<i;j++){
+//        scanf("%d %d", &num1, &num2);
+//        printf("%d\n", num1+num2);
+//    }
+    
+    // 2741
+//    int i;
+//    scanf("%d", &i);
+//    for(int j=1;j<=i;j++)
+//        printf("%d\n",j);
+    
+    // 2742
+//    int i;
+//    scanf("%d", &i);
+//    for(int j=i;j>0;j--)
+//        printf("%d\n",j);
+    
+    // 11021
+//    int i, count=0, num1, num2;
+//    scanf("%d", &i);
+//    for(int j=0;j<i;j++){
+//        scanf("%d %d", &num1, &num2);
+//        printf("Case #%d: %d\n",j+1,num1+num2);
+//    }
+    
+    // 11022
+//    int i, count=0, num1, num2;
+//    scanf("%d", &i);
+//    for(int j=0;j<i;j++){
+//        scanf("%d %d", &num1, &num2);
+//        printf("Case #%d: %d+%d = %d\n",j+1,num1, num2, num1+num2);
+//    }
+    
+    // 2438
+    int length, height=0;
+    scanf("%d", &height);
+    for(int i=1;i<=height;i++){
+        for(length=0; length<i;length++)
+            printf("*");
+        printf("\n");
+    }
     return 0;
 }
