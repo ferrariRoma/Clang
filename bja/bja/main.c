@@ -138,12 +138,42 @@ int main() {
 //    }
     
     // 2438
-    int length, height=0;
-    scanf("%d", &height);
-    for(int i=1;i<=height;i++){
-        for(length=0; length<i;length++)
-            printf("*");
-        printf("\n");
+//    int length, height=0;
+//    scanf("%d", &height);
+//    for(int i=1;i<=height;i++){
+//        for(length=0; length<i;length++)
+//            printf("*");
+//        printf("\n");
+//    }
+    
+    // 2439
+//    int height, i;
+//    scanf("%d", &height);
+//    for(i=height;i>0;i--){
+//        for(int mkspace=i;mkspace>1;mkspace--){
+//            printf(" ");
+//        }
+//        for(int star=0;star<height-(i-1);star++){
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+    
+    // 10871
+    int answer1=0, answer2=0 ,answer3=0;
+    printf("몇개를 입력받을까요?: ");
+    scanf("%d",&answer1);
+    getchar();
+    printf("몇 보다 크면 좋을까요?: ");
+    scanf("%d",&answer2);
+    for(;answer1>0;answer1--){
+        printf("수열 입력: ");
+        scanf("%d",&answer3);
+        getchar();
+        if(answer3<answer2){
+            printf("%d\n",answer3);
+        }
     }
+    printf("\n");
     return 0;
 }
