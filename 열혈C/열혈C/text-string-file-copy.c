@@ -3,14 +3,71 @@
 //  열혈C
 //
 //  Created by 안동규 on 2021/11/10.
-//  520p 예제 실습(fread, fwrite)
+//
 
 #define max 10000
 
 #include <stdio.h>
 
+typedef struct point {
+    int xpos;
+    int ypos;
+} Point;
+
+typedef struct circle {
+    Point cen;
+    double rad;
+} Circle;
+
+void PrintCircleInfo(Circle *cir)
+{
+    printf("xpos: %d\nypos: %d\nrad: %.2f\n",
+           cir->cen.xpos,cir->cen.ypos,cir->rad);
+}
+
+void ChangePosPos(Point *pos1,Point *pos2)
+{
+    Point temp;
+//    temp->xpos = pos1->xpos;
+//    temp->ypos = pos1->ypos;
+//    pos1->xpos = pos2->xpos;
+//    pos1->ypos = pos2->ypos;
+//    pos2->xpos = temp->xpos;
+//    pos2->ypos = temp->ypos;
+    // 482p에서의 배움을 사용하자!
+    temp = *pos1;  // temp에 pos1의 주소복사
+    *pos1 = *pos2;  // pos1주소에 pos2 주소복사
+    * pos2 = temp;  // pos2에 pos1 주소복사
+}
+
 int main(void)
 {
+    // review 486p example
+//    Circle circle1 = {{1,2},1.9};
+//    Circle circle2 = {3,6,5.2};
+//    PrintCircleInfo(&circle1);
+//    PrintCircleInfo(&circle2);
+    
+    // review 482p example
+//    Point pos1={1,2};  // 선언 및 초기화까지
+//    Point pos2;  // 선언만
+//    pos2 = pos1;  // pos1이 완전하게 pos2로 복사!
+//    printf("pos1 xpos: %d\n", pos1.xpos);
+//    printf("pos1 ypos: %d\n", pos1.ypos);
+//    printf("pos2 xpos: %d\n", pos2.xpos);
+//    printf("pos2 ypos: %d\n", pos2.ypos);
+//    printf("pos1 size: %d\n", sizeof(pos1));
+//    printf("pos2 size: %d\n", sizeof(pos2));
+    // 결론: 구조체 변수간 대입연산의 결과는 멤버 대 멤버의 복사가 이뤄짐!
+    
+    // review 484p practice
+//    Point pos1 = {2,4};
+//    Point pos2 = {5,7};
+//    ChangePosPos(&pos1,&pos2);
+//    printf("pos1 x: %d, y: %d\n",pos1.xpos,pos1.ypos);
+//    printf("pos2 x: %d, y: %d\n",pos2.xpos,pos2.ypos);
+    
+    // 520p 예제 실습(fread, fwrite)
 //        FILE *src = fopen("/Users/andong-gyu/Music/Music/Media.localized/Unknown Artist/Unknown Album/TOKYO MACHINE & Guy Arthur - GET UP [NCS Release].mp3","rb");
 //        FILE *des = fopen("/Users/andong-gyu/Documents/develope/C language/nadocoding/nado_review/txtfile/music.mp3","wb");
 //        char buf[max];
@@ -93,20 +150,20 @@ int main(void)
 //        return -1;
 //    }
     
-    FILE *readfile = fopen("/Users/andong-gyu/Documents/develope/C language/nadocoding/nado_review/txtfile/mystory.txt","rt");
-    if(readfile==NULL){
-        puts("파일 열기 실패!\n\n");
-        return -1;
-    }
-    char temp[max];
-    
-    while(fgets(temp, sizeof(temp), readfile)!=NULL){
-        fputs(temp, stdout);
-    }
-    
-    if(fclose(readfile)!=0){
-        puts("스트림 제거 실패!\n");
-        return -1;
-    }
+//    FILE *readfile = fopen("/Users/andong-gyu/Documents/develope/C language/nadocoding/nado_review/txtfile/mystory.txt","rt");
+//    if(readfile==NULL){
+//        puts("파일 열기 실패!\n\n");
+//        return -1;
+//    }
+//    char temp[max];
+//
+//    while(fgets(temp, sizeof(temp), readfile)!=NULL){
+//        fputs(temp, stdout);
+//    }
+//
+//    if(fclose(readfile)!=0){
+//        puts("스트림 제거 실패!\n");
+//        return -1;
+//    }
     return 0;
 }
