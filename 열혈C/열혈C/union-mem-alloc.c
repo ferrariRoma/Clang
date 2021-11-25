@@ -58,7 +58,7 @@ void SoundSyll(Syllable sy)
     puts("다 함께 부르세~ 도레미파 솔라시도 솔 도~ 짠~");
 }
 
-int main(void)
+int main_union_mem_alloc(void)
 {
     // 520p example
 //    FILE *src = fopen("/Users/andong-gyu/Music/Music/Media.localized/Unknown Artist/Unknown Album/TOKYO MACHINE & Guy Arthur - GET UP [NCS Release].mp3","rb");
