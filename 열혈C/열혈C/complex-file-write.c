@@ -46,7 +46,7 @@ long reviewfn(FILE *fp)
     return fsize;
 }
 
-int main(void)
+int main_complex_file_write(void)
 {
     // review
 //    FILE *readfp = fopen("/Users/andong-gyu/Documents/develope/C language/nadocoding/nado_review/txtfile/structFile.txt", "rt");

@@ -21,6 +21,7 @@
 		1B85B40C26DF20C300DECA5E /* pointer_practice.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B40B26DF20C300DECA5E /* pointer_practice.c */; };
 		1B85B40E26DF20F700DECA5E /* loopstatement.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B40D26DF20F700DECA5E /* loopstatement.c */; };
 		1B85E31B274FCC5A000E1199 /* complex-file-write.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85E31A274FCC5A000E1199 /* complex-file-write.c */; };
+		1BA41EA327546B6900DDAA90 /* memory-structure.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BA41EA227546B6900DDAA90 /* memory-structure.c */; };
 		1BB46184274E1F2900FEFF5A /* union-mem-alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BB46183274E1F2900FEFF5A /* union-mem-alloc.c */; };
 		1BBA0B8B26F364AD00ADFF2D /* darr_access.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BBA0B8A26F364AD00ADFF2D /* darr_access.c */; };
 		1BBAA2662729CDE8005A8590 /* struct_array.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BBAA2652729CDE8005A8590 /* struct_array.c */; };
@@ -56,6 +57,7 @@
 		1B85B40B26DF20C300DECA5E /* pointer_practice.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pointer_practice.c; sourceTree = "<group>"; };
 		1B85B40D26DF20F700DECA5E /* loopstatement.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = loopstatement.c; sourceTree = "<group>"; };
 		1B85E31A274FCC5A000E1199 /* complex-file-write.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "complex-file-write.c"; sourceTree = "<group>"; };
+		1BA41EA227546B6900DDAA90 /* memory-structure.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "memory-structure.c"; sourceTree = "<group>"; };
 		1BB46183274E1F2900FEFF5A /* union-mem-alloc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "union-mem-alloc.c"; sourceTree = "<group>"; };
 		1BBA0B8A26F364AD00ADFF2D /* darr_access.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = darr_access.c; sourceTree = "<group>"; };
 		1BBAA2652729CDE8005A8590 /* struct_array.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = struct_array.c; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				1B13A87A273C08D600C36DEF /* text-string-file-copy.c */,
 				1BB46183274E1F2900FEFF5A /* union-mem-alloc.c */,
 				1B85E31A274FCC5A000E1199 /* complex-file-write.c */,
+				1BA41EA227546B6900DDAA90 /* memory-structure.c */,
 			);
 			path = "열혈C";
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			files = (
 				1B2E03682731262000300186 /* struct_variable.c in Sources */,
 				1BF255ED26F776F900772205 /* read_write_char.c in Sources */,
+				1BA41EA327546B6900DDAA90 /* memory-structure.c in Sources */,
 				1B85B40C26DF20C300DECA5E /* pointer_practice.c in Sources */,
 				1B85B40826DF206900DECA5E /* loop_practice.c in Sources */,
 				1B05839D271329DA00520F45 /* question_string_cmp.c in Sources */,
