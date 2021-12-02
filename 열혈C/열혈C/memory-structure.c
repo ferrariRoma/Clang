@@ -53,8 +53,75 @@ char *ReadUserName(void)
     return name;
 }
 
-int main(void)
+
+
+int main_memory_structure(void)
 {
+    // 551p question 25-2-2 review
+    int i=0,maxlen=5,temp;
+    int *number = (int*)malloc(sizeof(int)*maxlen);
+    while(1)
+    {
+        printf("%d번째 정수: ",i+1);
+        scanf("%d",&number[i]);
+        if(number[i]==-1)
+            break;
+        if(i+1==maxlen){
+            maxlen+=3;
+            number = (int*)realloc(number, sizeof(int)*maxlen);
+        }
+        i++;
+    }
+    temp=i;
+    printf("\n");
+    for(i=0;i<temp;i++){
+        printf("%d ",number[i]);
+    }
+    printf("\n");
+    free(number);
+    // 답안지에는 없었던 temp를 추가해서 마지막 i 값을 저장
+    // 출력 반복문에서 i<temp를 하면서 마지막 -1은 출력 안됨
+    
+    // 551p question 25-2-1 second_review
+//    int maxlen, len;
+//    printf("총 몇 자를 입력하시겠습니까?: ");
+//    scanf("%d",&maxlen);
+//    getchar();
+//    char *words = (char*)malloc(sizeof(char)*(maxlen+1));
+//    printf("문자열을 입력해주세요: ");
+//    fgets(words, maxlen+1, stdin);
+//    len = strlen(words);
+//    words[len-1] = 0;  // \n제거
+//    for(int i=len;i>0;i--)
+//    {
+//        if(words[i]==' '){
+//            printf("%s ",&words[i+1]);
+//            words[i] = 0;
+//        }
+//    }
+//    printf("%s\n",&words[0]);
+//    free(words);
+    
+    // 551p question 25-2-1 review
+//    int maxlen, len, i;
+//    printf("총 몇 자를 입력하시겠습니까?: ");
+//    scanf("%d",&maxlen);
+//    getchar();
+//    char *words = (char*)malloc(sizeof(char)*(maxlen+1));  // null문자 자리도 확보
+//    printf("문자열을 입력해주세요: ");
+//    fgets(words, maxlen+1, stdin);
+//    len = strlen(words);
+//    words[len-1] = 0;  // \n 삭제
+//    for(i=len;i>0;i--)
+//    {
+//        if(words[i]==' '){
+//            printf("%s ", &words[i+1]);  // 빈 칸은 만나면 출력
+//            words[i] = 0;
+//        }
+//    }
+//    printf("%s\n",&words[0]);
+//    free(words);
+    
     // 551p question 25-2-2
 //    int i=0, len=5;
 //    int *answer = (int*)malloc(sizeof(int)*len);

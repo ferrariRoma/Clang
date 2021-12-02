@@ -9,11 +9,29 @@
 /* Begin PBXBuildFile section */
 		1B05839D271329DA00520F45 /* question_string_cmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B05839C271329DA00520F45 /* question_string_cmp.c */; };
 		1B13A87B273C08D600C36DEF /* text-string-file-copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B13A87A273C08D600C36DEF /* text-string-file-copy.c */; };
+		1B13B1882758952C006F2B24 /* reviewBasicArith.h in Sources */ = {isa = PBXBuildFile; fileRef = 1B13B1872758952C006F2B24 /* reviewBasicArith.h */; };
+		1B13B18A275895A5006F2B24 /* reviewBasicArith.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B13B189275895A5006F2B24 /* reviewBasicArith.c */; };
+		1B13B1922758984D006F2B24 /* reviewAreaArith.h in Sources */ = {isa = PBXBuildFile; fileRef = 1B13B1912758984D006F2B24 /* reviewAreaArith.h */; };
+		1B13B1942758992D006F2B24 /* reviewAreaArith.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B13B1932758992D006F2B24 /* reviewAreaArith.c */; };
+		1B13B19627589A48006F2B24 /* reviewArith.h in Sources */ = {isa = PBXBuildFile; fileRef = 1B13B19527589A48006F2B24 /* reviewArith.h */; };
+		1B13B19827589ACC006F2B24 /* reviewRoundArith.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B13B19727589ACC006F2B24 /* reviewRoundArith.c */; };
+		1B13B19A27589B41006F2B24 /* reviewMain.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B13B19927589B41006F2B24 /* reviewMain.c */; };
+		1B13B19C2758B6AD006F2B24 /* stdiv2.h in Sources */ = {isa = PBXBuildFile; fileRef = 1B13B19B2758B6AD006F2B24 /* stdiv2.h */; };
+		1B13B19E2758B711006F2B24 /* intdiv4.h in Sources */ = {isa = PBXBuildFile; fileRef = 1B13B19D2758B711006F2B24 /* intdiv4.h */; };
+		1B13B1A02758B83B006F2B24 /* intdiv4.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B13B19F2758B83B006F2B24 /* intdiv4.c */; };
+		1B13B1A22758B8A2006F2B24 /* intmain.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B13B1A12758B8A2006F2B24 /* intmain.c */; };
 		1B21720226E32F1C00848D44 /* function.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B21720126E32F1C00848D44 /* function.c */; };
 		1B280CF126F5C0B9005F96AD /* arrRotate.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B280CF026F5C0B9005F96AD /* arrRotate.c */; };
 		1B2E03682731262000300186 /* struct_variable.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E03672731262000300186 /* struct_variable.c */; };
 		1B4DD14F273577FB00885577 /* text-datafile-write.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B4DD14E273577FB00885577 /* text-datafile-write.c */; };
 		1B546F6B27573A06005B9187 /* if-endif.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B546F6A27573A06005B9187 /* if-endif.c */; };
+		1B546F6D2757A2D8005B9187 /* basicArith.h in Sources */ = {isa = PBXBuildFile; fileRef = 1B546F6C2757A2D8005B9187 /* basicArith.h */; };
+		1B546F6F2757A394005B9187 /* basicArith.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B546F6E2757A394005B9187 /* basicArith.c */; };
+		1B546F712757A4E3005B9187 /* areaArith.h in Sources */ = {isa = PBXBuildFile; fileRef = 1B546F702757A4E3005B9187 /* areaArith.h */; };
+		1B546F732757A563005B9187 /* areaArith.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B546F722757A563005B9187 /* areaArith.c */; };
+		1B546F752757A6DA005B9187 /* roundArith.h in Sources */ = {isa = PBXBuildFile; fileRef = 1B546F742757A6DA005B9187 /* roundArith.h */; };
+		1B546F772757A722005B9187 /* roundArith.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B546F762757A722005B9187 /* roundArith.c */; };
+		1B546F792757A805005B9187 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B546F782757A805005B9187 /* main.c */; };
 		1B578B94273A1BEC00009F29 /* question-twenty-three-two.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B578B93273A1BEC00009F29 /* question-twenty-three-two.c */; };
 		1B5B70D026E70B65009895D6 /* recursive_func.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B5B70CF26E70B65009895D6 /* recursive_func.c */; };
 		1B85B40126DF203200DECA5E /* array_example.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B85B40026DF203200DECA5E /* array_example.c */; };
@@ -45,11 +63,29 @@
 /* Begin PBXFileReference section */
 		1B05839C271329DA00520F45 /* question_string_cmp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = question_string_cmp.c; sourceTree = "<group>"; };
 		1B13A87A273C08D600C36DEF /* text-string-file-copy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "text-string-file-copy.c"; sourceTree = "<group>"; };
+		1B13B1872758952C006F2B24 /* reviewBasicArith.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reviewBasicArith.h; sourceTree = "<group>"; };
+		1B13B189275895A5006F2B24 /* reviewBasicArith.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = reviewBasicArith.c; sourceTree = "<group>"; };
+		1B13B1912758984D006F2B24 /* reviewAreaArith.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reviewAreaArith.h; sourceTree = "<group>"; };
+		1B13B1932758992D006F2B24 /* reviewAreaArith.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = reviewAreaArith.c; sourceTree = "<group>"; };
+		1B13B19527589A48006F2B24 /* reviewArith.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reviewArith.h; sourceTree = "<group>"; };
+		1B13B19727589ACC006F2B24 /* reviewRoundArith.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = reviewRoundArith.c; sourceTree = "<group>"; };
+		1B13B19927589B41006F2B24 /* reviewMain.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = reviewMain.c; sourceTree = "<group>"; };
+		1B13B19B2758B6AD006F2B24 /* stdiv2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stdiv2.h; sourceTree = "<group>"; };
+		1B13B19D2758B711006F2B24 /* intdiv4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = intdiv4.h; sourceTree = "<group>"; };
+		1B13B19F2758B83B006F2B24 /* intdiv4.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = intdiv4.c; sourceTree = "<group>"; };
+		1B13B1A12758B8A2006F2B24 /* intmain.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = intmain.c; sourceTree = "<group>"; };
 		1B21720126E32F1C00848D44 /* function.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = function.c; sourceTree = "<group>"; };
 		1B280CF026F5C0B9005F96AD /* arrRotate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = arrRotate.c; sourceTree = "<group>"; };
 		1B2E03672731262000300186 /* struct_variable.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = struct_variable.c; sourceTree = "<group>"; };
 		1B4DD14E273577FB00885577 /* text-datafile-write.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "text-datafile-write.c"; sourceTree = "<group>"; };
 		1B546F6A27573A06005B9187 /* if-endif.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "if-endif.c"; sourceTree = "<group>"; };
+		1B546F6C2757A2D8005B9187 /* basicArith.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = basicArith.h; sourceTree = "<group>"; };
+		1B546F6E2757A394005B9187 /* basicArith.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = basicArith.c; sourceTree = "<group>"; };
+		1B546F702757A4E3005B9187 /* areaArith.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = areaArith.h; sourceTree = "<group>"; };
+		1B546F722757A563005B9187 /* areaArith.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = areaArith.c; sourceTree = "<group>"; };
+		1B546F742757A6DA005B9187 /* roundArith.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = roundArith.h; sourceTree = "<group>"; };
+		1B546F762757A722005B9187 /* roundArith.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = roundArith.c; sourceTree = "<group>"; };
+		1B546F782757A805005B9187 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		1B578B93273A1BEC00009F29 /* question-twenty-three-two.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "question-twenty-three-two.c"; sourceTree = "<group>"; };
 		1B5B70CF26E70B65009895D6 /* recursive_func.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = recursive_func.c; sourceTree = "<group>"; };
 		1B85B3FD26DF203200DECA5E /* 열혈C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "열혈C"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +154,24 @@
 				1B85E31A274FCC5A000E1199 /* complex-file-write.c */,
 				1BA41EA227546B6900DDAA90 /* memory-structure.c */,
 				1B546F6A27573A06005B9187 /* if-endif.c */,
+				1B546F6C2757A2D8005B9187 /* basicArith.h */,
+				1B546F6E2757A394005B9187 /* basicArith.c */,
+				1B546F702757A4E3005B9187 /* areaArith.h */,
+				1B546F722757A563005B9187 /* areaArith.c */,
+				1B546F742757A6DA005B9187 /* roundArith.h */,
+				1B546F762757A722005B9187 /* roundArith.c */,
+				1B546F782757A805005B9187 /* main.c */,
+				1B13B1872758952C006F2B24 /* reviewBasicArith.h */,
+				1B13B189275895A5006F2B24 /* reviewBasicArith.c */,
+				1B13B1912758984D006F2B24 /* reviewAreaArith.h */,
+				1B13B1932758992D006F2B24 /* reviewAreaArith.c */,
+				1B13B19527589A48006F2B24 /* reviewArith.h */,
+				1B13B19727589ACC006F2B24 /* reviewRoundArith.c */,
+				1B13B19927589B41006F2B24 /* reviewMain.c */,
+				1B13B19B2758B6AD006F2B24 /* stdiv2.h */,
+				1B13B19D2758B711006F2B24 /* intdiv4.h */,
+				1B13B19F2758B83B006F2B24 /* intdiv4.c */,
+				1B13B1A12758B8A2006F2B24 /* intmain.c */,
 			);
 			path = "열혈C";
 			sourceTree = "<group>";
@@ -179,25 +233,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B2E03682731262000300186 /* struct_variable.c in Sources */,
+				1B13B19C2758B6AD006F2B24 /* stdiv2.h in Sources */,
+				1B13B1A22758B8A2006F2B24 /* intmain.c in Sources */,
+				1B546F752757A6DA005B9187 /* roundArith.h in Sources */,
 				1BF255ED26F776F900772205 /* read_write_char.c in Sources */,
 				1BA41EA327546B6900DDAA90 /* memory-structure.c in Sources */,
+				1B546F6F2757A394005B9187 /* basicArith.c in Sources */,
+				1B13B1942758992D006F2B24 /* reviewAreaArith.c in Sources */,
 				1B85B40C26DF20C300DECA5E /* pointer_practice.c in Sources */,
+				1B546F712757A4E3005B9187 /* areaArith.h in Sources */,
 				1B85B40826DF206900DECA5E /* loop_practice.c in Sources */,
 				1B05839D271329DA00520F45 /* question_string_cmp.c in Sources */,
 				1B280CF126F5C0B9005F96AD /* arrRotate.c in Sources */,
 				1B546F6B27573A06005B9187 /* if-endif.c in Sources */,
 				1BBAA2662729CDE8005A8590 /* struct_array.c in Sources */,
+				1B546F6D2757A2D8005B9187 /* basicArith.h in Sources */,
 				1BBA0B8B26F364AD00ADFF2D /* darr_access.c in Sources */,
+				1B546F732757A563005B9187 /* areaArith.c in Sources */,
+				1B13B1922758984D006F2B24 /* reviewAreaArith.h in Sources */,
+				1B13B1882758952C006F2B24 /* reviewBasicArith.h in Sources */,
 				1B578B94273A1BEC00009F29 /* question-twenty-three-two.c in Sources */,
+				1B13B19E2758B711006F2B24 /* intdiv4.h in Sources */,
+				1B13B19827589ACC006F2B24 /* reviewRoundArith.c in Sources */,
+				1B13B18A275895A5006F2B24 /* reviewBasicArith.c in Sources */,
 				1B5B70D026E70B65009895D6 /* recursive_func.c in Sources */,
 				1BF16B6F26F4B3DA00DB9843 /* functionPointer.c in Sources */,
 				1BB46184274E1F2900FEFF5A /* union-mem-alloc.c in Sources */,
 				1B85B40A26DF209400DECA5E /* beat_practice.c in Sources */,
+				1B546F792757A805005B9187 /* main.c in Sources */,
 				1B13A87B273C08D600C36DEF /* text-string-file-copy.c in Sources */,
 				1B85B40E26DF20F700DECA5E /* loopstatement.c in Sources */,
 				1B4DD14F273577FB00885577 /* text-datafile-write.c in Sources */,
 				1B85E31B274FCC5A000E1199 /* complex-file-write.c in Sources */,
+				1B13B1A02758B83B006F2B24 /* intdiv4.c in Sources */,
+				1B13B19627589A48006F2B24 /* reviewArith.h in Sources */,
+				1B546F772757A722005B9187 /* roundArith.c in Sources */,
 				1B85B40126DF203200DECA5E /* array_example.c in Sources */,
+				1B13B19A27589B41006F2B24 /* reviewMain.c in Sources */,
 				1B21720226E32F1C00848D44 /* function.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
