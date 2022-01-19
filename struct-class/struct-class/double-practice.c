@@ -110,7 +110,7 @@ int FreeNode()
     return 0;
 }
 
-int main(void)
+int main_double_practice(void)
 {
     IniNode();
     firstnode(3);

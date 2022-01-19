@@ -1,0 +1,3 @@
+kim m 20
+nam f 32
+ha f 22

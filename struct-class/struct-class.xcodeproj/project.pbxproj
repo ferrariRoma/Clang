@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B3004612771AB7800E66846 /* queue.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B3004602771AB7800E66846 /* queue.c */; };
+		1B3004632771C1C500E66846 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B3004622771C1C500E66846 /* stack.c */; };
 		1BDA03AA273D82BB001FBA16 /* double-practice.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BDA03A9273D82BB001FBA16 /* double-practice.c */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1B3004602771AB7800E66846 /* queue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = queue.c; sourceTree = "<group>"; };
+		1B3004622771C1C500E66846 /* stack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stack.c; sourceTree = "<group>"; };
 		1BDA039F273D1BB3001FBA16 /* struct-class */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "struct-class"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDA03A9273D82BB001FBA16 /* double-practice.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "double-practice.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				1BDA03A9273D82BB001FBA16 /* double-practice.c */,
+				1B3004602771AB7800E66846 /* queue.c */,
+				1B3004622771C1C500E66846 /* stack.c */,
 			);
 			path = "struct-class";
 			sourceTree = "<group>";
@@ -119,7 +125,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B3004632771C1C500E66846 /* stack.c in Sources */,
 				1BDA03AA273D82BB001FBA16 /* double-practice.c in Sources */,
+				1B3004612771AB7800E66846 /* queue.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
