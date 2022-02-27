@@ -294,25 +294,52 @@ int main() {
     // 이 모든 결과가 number에 반영이 되기 때문에 그렇다.
     
     // 3052번
-    int arr[10] = {0,};
-    int result[42] = {0,};
-    for(int i=0;i<10;i++){
-        scanf("%d ", &arr[i]);
-    }
-    int temp=0;
-    for(int i=0;i<10;i++){
-        temp = arr[i]%42;
-        result[temp]++;
-    }
-    
-    int count=0;
-    for(int i=0;i<42;i++){
-        if(result[i]!=0)
-            count++;
-    }
-    printf("%d \n",count);
+//    int arr[10] = {0,};
+//    int result[42] = {0,};
+//    for(int i=0;i<10;i++){
+//        scanf("%d ", &arr[i]);
+//    }
+//    int temp=0;
+//    for(int i=0;i<10;i++){
+//        temp = arr[i]%42;
+//        result[temp]++;
+//    }
+//
+//    int count=0;
+//    for(int i=0;i<42;i++){
+//        if(result[i]!=0)
+//            count++;
+//    }
+//    printf("%d \n",count);
     
     // 42로 나누면 나머지가 0~41이 될 수 있다는 걸 간과했군..ㅜ
+    
+    // 3052 복습
+    
+//    int arr[10] = {0,};
+//    int answer[42] = {0,};
+//    // 42로 나누니까 경우의 수는 42가지 배열에 다 들어감
+//
+//    for(int i=0; i<10; i++){
+//        printf("%d번째 숫자를 입력하세요: ", i);
+//        scanf("%d", &arr[i]);
+//    }
+//
+//    int result;
+//    for(int i=0; i<10; i++){
+//        printf("%d를 42로 나눕니다.\n", arr[i]);
+//        result = arr[i]%42;
+//        answer[result]++;
+//    }
+//
+//    int count = 0;
+//    for(int i=0; i<42; i++){
+//        if(answer[i] != 0){
+//            count++;
+//        }
+//    }
+//
+//    printf("\n\n결과는 %d 입니다.\n", count);
     
     return 0;
 }
