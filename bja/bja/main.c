@@ -341,5 +341,13 @@ int main() {
 //
 //    printf("\n\n결과는 %d 입니다.\n", count);
     
+    // 1546번
+    
+    int subject;
+    scanf("%d ", &subject);
+    for(int i=0; i<subject; i++){
+        
+    }
+    
     return 0;
 }

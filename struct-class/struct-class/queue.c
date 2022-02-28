@@ -17,7 +17,7 @@ int rear = -1;
 void addQueue(int *rear, element item);
 element deleteQueue(int *front, int rear);
 
-int main(void)
+int main_queue(void)
 {
     
     return 0;
