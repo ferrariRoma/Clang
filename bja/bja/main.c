@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main() {
     // 2588번
@@ -344,10 +345,31 @@ int main() {
     // 1546번
     
     int subject;
-    scanf("%d ", &subject);
+    float maxPoint = 0;
+    float avg = 0.0;
+    
+    printf("몇 개의 과목이 있나요?: ");
+    scanf("%d", &subject);
+    
+    float arr[subject];
+    
     for(int i=0; i<subject; i++){
-        
+        printf("%d번째 과목 점수: ", i+1);
+        scanf("%f", &arr[i]);
+        if(maxPoint<arr[i])
+            maxPoint = arr[i];
     }
+    
+    printf("\n최고점으로 다시 점수를 계산 하겠습니다.\n\n");
+    for(int i=0; i<subject; i++){
+        arr[i] = arr[i]/maxPoint*100;
+        avg += arr[i];
+        if(i==subject-1){
+            avg = (float)avg/subject;
+        }
+    }
+    
+    printf("\n\n평균: %f\n", avg);
     
     return 0;
 }
