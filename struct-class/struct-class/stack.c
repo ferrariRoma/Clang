@@ -1,180 +1,103 @@
-//
-//  stack.c
-//  struct-class
-//
-//  Created by 안동규 on 2021/12/21.
-//
-
-//#include <stdio.h>
-//#include <stdlib.h>
-//#include <string.h>
-//
-//typedef struct tagNode{
-//    char Data[20];
-//    struct tagNode *nextNode;
-//}NODE;
-//
-//typedef struct tagStack{
-//    NODE *Base;
-//    NODE *Top;
-//}STACK;
-//
-//// 스택 생성
-//void CreateStack(STACK** Stack)
-//{
-//    (*Stack) = (STACK*)malloc(sizeof(STACK));
-//    (*Stack)->Base = NULL;  // Base, Top 초기화
-//    (*Stack)->Top = NULL;
-//}
-//
-//// 노드 생성
-//NODE* CreateNode(char Data[])
-//{
-//    NODE* NewNode = (NODE*)malloc(sizeof(NODE));
-//    strcpy(NewNode->Data, Data);
-//    NewNode->nextNode = NULL;
-//    return NewNode;
-//}
-//
-//// 새 노드 생성 및 스택에 PUSH!
-//void Push(STACK* Stack, char Data[])
-//{
-//    NODE* NewNode = CreateNode(Data);
-//    if(Stack->Base == NULL){
-//        Stack->Base=NewNode;
-//    } else {
-//        Stack->Top->nextNode = NewNode;
-//    }
-//    Stack->Top = NewNode;
-//}
-//
-//// while로 Top직전 노드 찾아서 pop!
-//NODE* Pop(STACK* Stack)
-//{
-//    NODE* tempPop = Stack->Top;
-//    if(Stack->Base == Stack->Top){
-//        Stack->Base = NULL;
-//        Stack->Top = NULL;
-//    } else {
-//        NODE* current = Stack->Base;
-//
-//        while(current->nextNode!=Stack->Top&&current!=NULL){
-//            current = current->nextNode;
-//        }
-//
-//        current->nextNode = NULL;
-//        Stack->Top = current;
-//    }
-//
-//    return tempPop;
-//}
-//
-//// Pop함수와 함께 사용
-//void PrintNode(NODE* Node)
-//{
-//    printf("pop: %s\n", Node->Data);
-//    free(Node);
-//}
-//
-//// 스택이 비었는지 확인
-//int IsEmpty(STACK* Stack)
-//{
-//    return (Stack->Base == NULL);
-//}
-//
-//int main(void)
-//{
-//    STACK* Stack;
-//    int i;
-//
-//    CreateStack(&Stack);
-//
-//    Push(Stack, "짜장면");
-//    Push(Stack, "짬뽕");
-//    Push(Stack, "군만두");
-//    PrintNode(Pop(Stack));
-//    PrintNode(Pop(Stack));
-//
-//    Push(Stack, "탕수육");
-//    Push(Stack, "팔보채");
-//
-//    while(1)
-//    {
-//        if(IsEmpty(Stack)) break;
-//        PrintNode(Pop(Stack));
-//    }
-//    return 0;
-//}
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-// 노드 구조체
+// 구조체 정의
 typedef struct Node{
-    char data[20];
     struct Node* NextNode;
+    char Data[20];
 } NODE;
 
-// 스택 구조체
 typedef struct Stack{
-    NODE* Top;
-    NODE* Bass;
+    struct Node* Top;
+    struct Node* Base;
 } STACK;
 
-// 초기화
+// 선언
+void InitStack(STACK** Stack);
+NODE* CreateNode(char Data[]);
+void Push(STACK* Stack, char Data[]);
+NODE* Pop(STACK* Stack);
+void printNode(NODE* Node);
+int IsEmpty(STACK* Stack);
+
+int main(void)
+{
+    STACK* Stack;
+    
+    InitStack(&Stack);
+    
+    Push(Stack, "짜장면");
+    Push(Stack, "짬뽕");
+    Push(Stack, "군만두");
+    printNode(Pop(Stack));
+    printNode(Pop(Stack));
+    Push(Stack, "탕수육");
+    Push(Stack, "팔보채");
+    
+    printf("\n\n");
+    while(1)
+    {
+        if(IsEmpty(Stack))
+        printNode(Pop(Stack));
+    }
+    
+    return 0;
+}
+
+// 정의
 void InitStack(STACK** Stack)
 {
+    (*Stack) = (STACK*)malloc(sizeof(STACK));
     (*Stack)->Top = NULL;
-    (*Stack)->Bass = NULL;
+    (*Stack)->Base = NULL;
 }
 
 NODE* CreateNode(char Data[])
 {
-    NODE* NewNode = (NODE*)malloc(sizeof(NODE));
-    strcpy(NewNode->data,Data);
-    NewNode->NextNode = NULL;
-    return NewNode;
+    NODE* newNode = (NODE*)malloc(sizeof(NODE));
+    strcpy(newNode->Data, Data);
+    newNode->NextNode = NULL;
+    return newNode;
 }
 
 void Push(STACK* Stack, char Data[])
 {
-    NODE* NewNode = CreateNode(Data);
-    if(Stack->Bass == NULL){
-        Stack->Bass = NewNode;
+    NODE* newNode = CreateNode(Data);
+    if(Stack->Base == NULL){
+        Stack->Base = newNode;
     } else{
-        Stack->Top->NextNode = NewNode;
+        Stack->Top->NextNode = Stack;
     }
-    Stack->Top = NewNode;
+    Stack->Top = newNode;
 }
 
-// Pop함수
 NODE* Pop(STACK* Stack)
 {
-    NODE* deletedNode = Stack->Top;
-    
-    // 빈 스택에 Pop했을 때
-    if(Stack->Bass == NULL){
+    NODE* deleteNode = Stack->Top;
+    if(Stack->Base == NULL){
         return 1;
-    }
-    
-    // 노드가 하나 밖에 없는 스택, 여러 개인 스택
-    if(Stack->Bass == Stack->Top){
+    } else if(Stack->Top == Stack->Base){
         Stack->Top = NULL;
-        Stack->Bass = NULL;
+        Stack->Base = NULL;
     } else {
-        NODE* temp = Stack->Bass;
-        while(temp->NextNode != Stack->Top && temp != NULL){
-            temp = temp->NextNode;
+        NODE* currNode = Stack->Base;
+        while(currNode->NextNode != deleteNode && currNode != NULL){
+            currNode = currNode->NextNode;
         }
-        temp->NextNode = NULL;
-        Stack->Top = temp;
+        currNode->NextNode = NULL;
+        Stack->Top = currNode;
     }
-    
-    return deletedNode;
+    return deleteNode;
 }
 
-int main(void)
+void printNode(NODE* Node)
 {
-    return 0;
+    printf("%s\n", Node->Data);
+    free(Node);
+}
+
+int IsEmpty(STACK* Stack)
+{
+    return (Stack->Base == NULL);
 }

@@ -344,32 +344,60 @@ int main() {
     
     // 1546번
     
+//    int subject;
+//    float maxPoint = 0;
+//    float avg = 0.0;
+//
+//    printf("몇 개의 과목이 있나요?: ");
+//    scanf("%d", &subject);
+//
+//    float arr[subject];
+//
+//    for(int i=0; i<subject; i++){
+//        printf("%d번째 과목 점수: ", i+1);
+//        scanf("%f", &arr[i]);
+//        if(maxPoint<arr[i])
+//            maxPoint = arr[i];
+//    }
+//
+//    printf("\n최고점으로 다시 점수를 계산 하겠습니다.\n\n");
+//    for(int i=0; i<subject; i++){
+//        arr[i] = arr[i]/maxPoint*100;
+//        avg += arr[i];
+//        if(i==subject-1){
+//            avg = (float)avg/subject;
+//        }
+//    }
+//
+//    printf("\n\n평균: %f\n", avg);
+
+    // 1546번 복습
+    
     int subject;
-    float maxPoint = 0;
-    float avg = 0.0;
-    
-    printf("몇 개의 과목이 있나요?: ");
+    printf("과목 수: ");
     scanf("%d", &subject);
-    
+
     float arr[subject];
-    
+    float maxPoint = 0;
+    printf("\n세준이의 성적을 입력하세요");
     for(int i=0; i<subject; i++){
-        printf("%d번째 과목 점수: ", i+1);
+        printf("%d번째 과목점수: ", i+1);
         scanf("%f", &arr[i]);
-        if(maxPoint<arr[i])
+        if(maxPoint < arr[i]){
             maxPoint = arr[i];
+        }
     }
-    
-    printf("\n최고점으로 다시 점수를 계산 하겠습니다.\n\n");
+
+    float avg = 0;
     for(int i=0; i<subject; i++){
         arr[i] = arr[i]/maxPoint*100;
         avg += arr[i];
-        if(i==subject-1){
-            avg = (float)avg/subject;
+        if(i == subject-1){
+            avg = avg/subject;
         }
     }
-    
-    printf("\n\n평균: %f\n", avg);
+
+    printf("\n\n%f\n", avg);
     
     return 0;
 }
