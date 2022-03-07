@@ -373,31 +373,66 @@ int main() {
 
     // 1546번 복습
     
-    int subject;
-    printf("과목 수: ");
-    scanf("%d", &subject);
-
-    float arr[subject];
-    float maxPoint = 0;
-    printf("\n세준이의 성적을 입력하세요");
-    for(int i=0; i<subject; i++){
-        printf("%d번째 과목점수: ", i+1);
-        scanf("%f", &arr[i]);
-        if(maxPoint < arr[i]){
-            maxPoint = arr[i];
+//    int subject;
+//    printf("과목 수: ");
+//    scanf("%d", &subject);
+//
+//    float arr[subject];
+//    float maxPoint = 0;
+//    printf("\n세준이의 성적을 입력하세요");
+//    for(int i=0; i<subject; i++){
+//        printf("%d번째 과목점수: ", i+1);
+//        scanf("%f", &arr[i]);
+//        if(maxPoint < arr[i]){
+//            maxPoint = arr[i];
+//        }
+//    }
+//
+//    float avg = 0;
+//    for(int i=0; i<subject; i++){
+//        arr[i] = arr[i]/maxPoint*100;
+//        avg += arr[i];
+//        if(i == subject-1){
+//            avg = avg/subject;
+//        }
+//    }
+//
+//    printf("\n\n%f\n", avg);
+    
+    // 8958번
+    
+    // 변수설정
+    /*
+        1. 문제 수
+        2. 문자열
+    */
+    int problem;
+    char arr[80] = {0,};
+    
+    // 테스트 케이스
+    printf("\n몇 문제를 내시겠습니까?: ");
+    scanf("%d", &problem);
+    
+    // OX입력하기
+    for(int i=0; i<problem; i++){
+        printf("\n%d번째 답을 입력하세요!: ", i+1);
+        scanf("%s", arr);
+        
+        // 채점하기(X나오면 초기화, 각 케이스마다 점수를 출력한다.)
+        int cons = 0; // 연속점수
+        int total = 0;  // 총 점수
+        int j = 0;
+        while(arr[j] != 0){
+            cons++;
+            if(arr[j] == 'X'){
+                cons = 0;
+            }
+            total += cons;
+            j++;
         }
+        
+        printf("\n\n총 점수는: %d\n", total);
     }
-
-    float avg = 0;
-    for(int i=0; i<subject; i++){
-        arr[i] = arr[i]/maxPoint*100;
-        avg += arr[i];
-        if(i == subject-1){
-            avg = avg/subject;
-        }
-    }
-
-    printf("\n\n%f\n", avg);
     
     return 0;
 }
