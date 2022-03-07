@@ -21,7 +21,7 @@ NODE* Pop(STACK* Stack);
 void printNode(NODE* Node);
 int IsEmpty(STACK* Stack);
 
-int main(void)
+int main_stack(void)
 {
     STACK* Stack;
     
@@ -38,7 +38,7 @@ int main(void)
     printf("\n\n");
     while(1)
     {
-        if(IsEmpty(Stack))
+        if(IsEmpty(Stack)) break; // 비어있으면 1, true출력, 안비었으면 0출력.
         printNode(Pop(Stack));
     }
     
@@ -67,7 +67,7 @@ void Push(STACK* Stack, char Data[])
     if(Stack->Base == NULL){
         Stack->Base = newNode;
     } else{
-        Stack->Top->NextNode = Stack;
+        Stack->Top->NextNode = newNode;
     }
     Stack->Top = newNode;
 }
