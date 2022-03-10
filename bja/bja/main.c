@@ -5,11 +5,7 @@
 //  Created by 안동규 on 2021/11/13.
 //  백준 문제들
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-int main() {
     // 2588번
 //    int a, b;
 //    scanf("%d %d",&a, &b);
@@ -406,33 +402,95 @@ int main() {
         1. 문제 수
         2. 문자열
     */
-    int problem;
-    char arr[80] = {0,};
+//    int problem;
+//    char arr[80] = {0,};
+//
+//    // 테스트 케이스
+//    printf("\n몇 문제를 내시겠습니까?: ");
+//    scanf("%d", &problem);
+//
+//    // OX입력하기
+//    for(int i=0; i<problem; i++){
+//        printf("\n%d번째 답을 입력하세요!: ", i+1);
+//        scanf("%s", arr);
+//
+//        // 채점하기(X나오면 초기화, 각 케이스마다 점수를 출력한다.)
+//        int cons = 0; // 연속점수
+//        int total = 0;  // 총 점수
+//        int j = 0;
+//        while(arr[j] != 0){
+//            cons++;
+//            if(arr[j] == 'X'){
+//                cons = 0;
+//            }
+//            total += cons;
+//            j++;
+//        }
+//
+//        printf("\n\n총 점수는: %d\n", total);
+//    }
     
-    // 테스트 케이스
-    printf("\n몇 문제를 내시겠습니까?: ");
-    scanf("%d", &problem);
+    // 4344번
+    /**
+     1. 첫 줄에 테스트 케이스 개수C가 주어진다.
+     2. 둘째 줄부터 각 테스트 케이스마다 학생의 수 N이 첫 수로 주어진다.
+     
+     1. 각 케이스마다 한 줄씩 평균을 넘는 학생들의 비율을 반올림하여
+     2. 소수점 셋째 자리까지 출력
+     
+     1. 평균 계산함수(평균보다 나은 학생의 퍼센트까지)
+     */
     
-    // OX입력하기
-    for(int i=0; i<problem; i++){
-        printf("\n%d번째 답을 입력하세요!: ", i+1);
-        scanf("%s", arr);
-        
-        // 채점하기(X나오면 초기화, 각 케이스마다 점수를 출력한다.)
-        int cons = 0; // 연속점수
-        int total = 0;  // 총 점수
-        int j = 0;
-        while(arr[j] != 0){
-            cons++;
-            if(arr[j] == 'X'){
-                cons = 0;
-            }
-            total += cons;
-            j++;
-        }
-        
-        printf("\n\n총 점수는: %d\n", total);
-    }
+//#include <stdio.h>
+//
+//int main(void) {
+//    int C;
+//    int N = 0;
+//
+//    printf("테스트 케이스의 개수를 입력해주세요: ");
+//    scanf("%d", &C);
+//
+//    double arr[C];
+//
+//    for(int i=0; i<C; i++){
+//        N=0;
+//        printf("%d번째 케이스 학생 수: ", i+1);
+//        scanf("%d", &N);
+//
+//        int arrPoint[N];
+//        double avg = 0;
+//        double result = 0;
+//
+//        for(int j=0; j<N; j++){
+//            printf("%d 번째 성적: ", j+1);
+//            scanf("%d", &arrPoint[j]);
+//            avg += arrPoint[j];
+//            if(j == N-1){
+//                avg = (double)avg/N;
+//            }
+//        }
+//
+//        int overPoint = 0;
+//        for(int j=0; j<N; j++){
+//            if(arrPoint[j] > avg){
+//                overPoint++;
+//            }
+//           result =  ((double)overPoint/N)*100;
+//        }
+//        arr[i] = result;
+//
+//        printf("\n\n%.3lf%%\n", arr[i]);
+//    }
+//
+//    return 0;
+//}
+
+    // 4344번 오답처리 돼서 다시 풀기
+
+#include <stdio.h>
+
+int main(void)
+{
     
     return 0;
 }
