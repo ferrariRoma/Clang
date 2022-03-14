@@ -491,6 +491,29 @@
 
 int main(void)
 {
+    int testCase;
+    int students;
+    
+    printf("testCase: ");
+    scanf("%d", &testCase);
+    
+    int arrCase[testCase];
+    
+    for(int i=0; i<testCase; i++){
+        printf("학생 수: ");
+        scanf("%d", &students);
+        
+        float avg = 0;
+        for(int j=0; j<students; j++){
+            printf("%d번째 성적: ", j+1);
+            scanf("%d", &students);
+            float arrStudents[students];
+            avg += arrStudents[j];
+            if(j = students-1){
+                avg = avg*100/students;
+            }
+        }
+    }
     
     return 0;
 }

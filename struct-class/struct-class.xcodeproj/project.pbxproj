@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B3004612771AB7800E66846 /* stack-calculator.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B3004602771AB7800E66846 /* stack-calculator.c */; };
 		1B3004632771C1C500E66846 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B3004622771C1C500E66846 /* stack.c */; };
+		1B51637F27DF2518008C80EF /* calc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B51637E27DF2518008C80EF /* calc.c */; };
 		1BDA03AA273D82BB001FBA16 /* double-practice.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BDA03A9273D82BB001FBA16 /* double-practice.c */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		1B3004602771AB7800E66846 /* stack-calculator.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "stack-calculator.c"; sourceTree = "<group>"; };
 		1B3004622771C1C500E66846 /* stack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stack.c; sourceTree = "<group>"; };
+		1B51637E27DF2518008C80EF /* calc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = calc.c; sourceTree = "<group>"; };
 		1BDA039F273D1BB3001FBA16 /* struct-class */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "struct-class"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDA03A9273D82BB001FBA16 /* double-practice.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "double-practice.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 			children = (
 				1BDA03A9273D82BB001FBA16 /* double-practice.c */,
 				1B3004602771AB7800E66846 /* stack-calculator.c */,
+				1B51637E27DF2518008C80EF /* calc.c */,
 				1B3004622771C1C500E66846 /* stack.c */,
 			);
 			path = "struct-class";
@@ -127,6 +130,7 @@
 			files = (
 				1B3004632771C1C500E66846 /* stack.c in Sources */,
 				1BDA03AA273D82BB001FBA16 /* double-practice.c in Sources */,
+				1B51637F27DF2518008C80EF /* calc.c in Sources */,
 				1B3004612771AB7800E66846 /* stack-calculator.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
