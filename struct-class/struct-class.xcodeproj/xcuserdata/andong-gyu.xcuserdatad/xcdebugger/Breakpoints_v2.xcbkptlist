@@ -23,32 +23,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E0C2C958-EB8D-4D76-A0CF-30CFBB22DBF8"
-            shouldBeEnabled = "No"
+            uuid = "F2E578CC-58B2-47B6-ADFB-F8686F5933D6"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "struct-class/calc.c"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "main()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A2407E3F-B0AC-4A5A-A3DE-58A6ECF76CB8"
-            shouldBeEnabled = "No"
-            condition = "s==4"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "struct-class/calc.c"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
