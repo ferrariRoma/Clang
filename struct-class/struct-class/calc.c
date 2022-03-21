@@ -38,7 +38,7 @@
 
 #include <stdio.h>
 
-int main(void)
+int main_calc(void)
 {
     char *src = "A+B*C/D-E";
     char op_stack[16], op_count = 0;
