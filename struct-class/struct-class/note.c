@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void)
+int main_note(void)
 {
     char *src = "A+B*C/D-E";
     char operator[16], op_count=0;

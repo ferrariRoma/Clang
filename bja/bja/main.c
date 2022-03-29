@@ -487,33 +487,65 @@
 
     // 4344번 오답처리 돼서 다시 풀기
 
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    int testCase;
+//    int students;
+//
+//    printf("testCase: ");
+//    scanf("%d", &testCase);
+//
+//    int arrCase[testCase];
+//
+//    for(int i=0; i<testCase; i++){
+//        printf("학생 수: ");
+//        scanf("%d", &students);
+//
+//        float avg = 0;
+//        for(int j=0; j<students; j++){
+//            printf("%d번째 성적: ", j+1);
+//            scanf("%d", &students);
+//            float arrStudents[students];
+//            avg += arrStudents[j];
+//            if(j = students-1){
+//                avg = avg*100/students;
+//            }
+//        }
+//    }
+//
+//    return 0;
+//}
+
+    // 4344 복습
 #include <stdio.h>
+
+void solution(int a)
+{
+    float score[a];
+    float avg=0;
+    for(int i=0; i<a; i++){
+        scanf("%f", &score[i]);
+        avg+=score[i];
+    }
+    avg = avg/a;
+    int count = 0;
+    for(int i=0;i<a;i++){
+        if(avg<score[i]) count++;
+    }
+    printf("%.3f%%\n",(float)count*100/a);
+}
 
 int main(void)
 {
-    int testCase;
-    int students;
-    
-    printf("testCase: ");
-    scanf("%d", &testCase);
-    
-    int arrCase[testCase];
-    
-    for(int i=0; i<testCase; i++){
-        printf("학생 수: ");
-        scanf("%d", &students);
-        
-        float avg = 0;
-        for(int j=0; j<students; j++){
-            printf("%d번째 성적: ", j+1);
-            scanf("%d", &students);
-            float arrStudents[students];
-            avg += arrStudents[j];
-            if(j = students-1){
-                avg = avg*100/students;
-            }
-        }
+    int number;
+    scanf("%d", &number);
+    for(int i=0; i<number; i++)
+    {
+        int student;
+        scanf("%d", &student);
+        solution(student);
     }
-    
     return 0;
 }
