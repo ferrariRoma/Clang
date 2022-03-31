@@ -519,33 +519,40 @@
 //}
 
     // 4344 복습
+//
+//void solution(int a)
+//{
+//    float score[a];
+//    float avg=0;
+//    for(int i=0; i<a; i++){
+//        scanf("%f", &score[i]);
+//        avg+=score[i];
+//    }
+//    avg = avg/a;
+//    int count = 0;
+//    for(int i=0;i<a;i++){
+//        if(avg<score[i]) count++;
+//    }
+//    printf("%.3f%%\n",(float)count*100/a);
+//}
+
+    // 15596번
+//long long sum(int *a, int n) {
+//    long long ans = 0;
+//    for(int i=0;i<n;i++) ans+=a[i];
+//    return ans;
+//}
+
 #include <stdio.h>
 
-void solution(int a)
+int solution(int a)
 {
-    float score[a];
-    float avg=0;
-    for(int i=0; i<a; i++){
-        scanf("%f", &score[i]);
-        avg+=score[i];
-    }
-    avg = avg/a;
-    int count = 0;
-    for(int i=0;i<a;i++){
-        if(avg<score[i]) count++;
-    }
-    printf("%.3f%%\n",(float)count*100/a);
+    
+    return 0;
 }
 
 int main(void)
 {
-    int number;
-    scanf("%d", &number);
-    for(int i=0; i<number; i++)
-    {
-        int student;
-        scanf("%d", &student);
-        solution(student);
-    }
+
     return 0;
 }

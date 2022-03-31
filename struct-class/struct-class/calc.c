@@ -1,70 +1,62 @@
-//
-//  calc.c
-//  struct-class
-//
-//  Created by 안동규 on 2022/03/14.
-//
-
-/*
- <필요함수>
- 1. 중위 계산법을 받으면 후위 계산법으로 계산
- 2. 사칙연산에 따른 우선순위 선정
- 3. 변환된 계산법을 읽으면서 숫자는 스택에 넣고,
-    사칙연산이 나오면 스택에서 top노드 2개를 빼서 계산하기
-    3.0. 괄호는 그것 먼저 계산해야 됨.
-    3.1. 가득찼는데 넣으면 오버플로우
-    3.2. 텅 비었는데 빼면 언더플로우
- **/
-
-/* <1차 목표> 후위표기법으로 변환하기! 각 항은 띄워주자
-항과 항 사이에는 띄워주기
-연산자 다음에 있는 계산할 항을 먼저 넣어주고
-다시 연산자 위치로 돌아가서 연산자를 dst에 넣어주기
-연산자가 아니면 dst에 PUSH! */
-
-/* <2차 목표> *와 /에 우선순위를 주어야 한다!
- 숫자는 바로바로 빼고,
- src에서 연산을 우선적으로 해야 하는 /과*는 먼저 계산될 수 있도록!
-    1. 연산자가 *나 /이면 일단 연산자스택에 넣어준다.
-    2. 연산자가 +나 -이면, 스택에 넣지 않고 스택 안에 있는 다른 연산자들이 있는지 확인한다.
-        2.1.1. 있으면 연산자 스택 안에 다른 연산자들을 꺼내준다.
-        2.1.2. 꺼내다가 +나 -를 만날 때까지 꺼내줌.
-        2.1.3. 다 꺼냈으면 현재 연산자를 연산자 목록에 다시 추가한다.
-    3. 그렇게 마지막이 될 때까지 해준다.
-    4. 그렇게 마지막이 됐을 때 나머지 +- 연산자들을 역순으로 출력해준다.
- */
-
-// <3차 목표> 괄호 기능은 넣기 "(1+2)/3-2"
-
+// note에 있는 개념을 발전시켜서 연산까지!
 #include <stdio.h>
+#include <stdlib.h>
 
-int main_calc(void)
+int calc(char a)
 {
-    char *src = "A+B*C/D-E";
-    char op_stack[16], op_count = 0;
     
-    // NULL문자가 나올 때까지 반복
-    while(*src){
-        // 문자들은 바로바로 출력
-        if(*src >= 'A' && *src <= 'Z') printf("%c", *src);
-        else {
-            // 연산자가 *나 /이면 연산자스택에 넣어준다.
-            if(*src == '*' || *src == '/') op_stack[op_count++] = *src;
-            else {
-                // 연산자가 +나 -이면, 연산자 스택 안에 다른 연산자들을 꺼내준다.
-                // 꺼내다가 +나 -를 만날 때까지 꺼내줌
-                while(op_count > 0) {
-                    if(op_stack[op_count-1] == '+' || op_stack[op_count-1] == '-') break;
-                    else printf("%c", op_stack[--op_count]);
-                }
-                // 현재 연산자를 연산자 목록에 추가한다.
-                op_stack[op_count++] = *src;
-            }
+    return 0;
+}
+
+int solution(char **num)
+{
+    char operator[20];
+    int number[20];
+    int count = 0, i=0, j = 0;
+    
+    while((*num)[i]){
+        // 숫자는 number배열에 삽입
+        if((*num)[i] >= '1' && (*num)[i] <= '9'){
+            number[j] = atoi(&(*num)[i]);
+            j++;
         }
-        src++;
+        // 곱셈,나눗셈 연산자를 만나면 number배열에서 숫자 2개 꺼내서 바로 계산!
+        if((*num)[i] == '*' || (*num)[i] == '/'){
+            if((*num)[i] == '*'){
+                number[j-1] = number[j-1]*atoi(&(*num)[i+1]);
+            }
+            if((*num)[i] == '/'){
+                number[j-1] = number[j-1]/atoi(&(*num)[i+1]);
+            }
+            i++;
+        }
+        // 덧셈,뺄셈 연산자를 만나면 operator에 넣어주기!
+        if((*num)[i] == '+' || (*num)[i] == '-'){
+            operator[count] = (*num)[i];
+            count++;
+        }
+        i++;
     }
-    // +와 -는 마지막에 역순으로 출력해주면 된다.
-    while(op_count) printf("%c", op_stack[--op_count]);
-    printf("\n");
+    
+    // 마지막에 하나씩 계산해주기!
+    while(count){
+        count--;
+        if(operator[count]=='+'){
+            number[j-2] = number[j-2]+number[j-1];
+            j--;
+        }
+        else if(operator[count]=='-'){
+            number[j-2] = number[j-2]-number[j-1];
+            j--;
+        }
+    }
+    printf("%d",number[0]);
+    return 0;
+}
+
+int main()
+{
+    char *number = "1+3/3+4-2*2";  // 2
+    solution(&number);
     return 0;
 }
