@@ -2,12 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int calc(char a)
-{
-    
-    return 0;
-}
-
 int solution(char **num)
 {
     char operator[20];
@@ -50,13 +44,13 @@ int solution(char **num)
             j--;
         }
     }
-    printf("%d",number[0]);
+    printf("%d\n",number[0]);
     return 0;
 }
 
 int main()
 {
-    char *number = "1+3/3+4-2*2";  // 2
+    char *number = "2+4*2/2-1";  // 2
     solution(&number);
     return 0;
 }
