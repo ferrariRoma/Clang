@@ -1,18 +1,15 @@
 function solution(new_id) {
-  let recoId = new String(new_id);
-  recoId = recoId
+  let answer = new_id
     .toLowerCase()
-    .replace(/[^a-z0-9-_\.]/g, "")
-    .replace(/(\.\.+)/g, ".")
-    .replace(/(^(\.)|(\.)$)/g, "")
-    .replace(/^$/g, "a")
+    .replace(/[^0-9a-z-_\.]/g, "")
+    .replace(/\.{2,}/g, ".")
+    .replace(/^\.|\.$/g, "")
+    .replace(/^$/, "a")
     .slice(0, 15)
-    .replace(/(\.)$/g, "");
-
-  recoId =
-    recoId.length <= 2
-      ? recoId + recoId.charAt(recoId.length - 1).repeat(3 - recoId.length)
-      : recoId;
-  answer = recoId;
+    .replace(/\.$/g, "");
+  const len = answer.length;
+  answer = len <= 2 ? answer + answer.charAt(len - 1).repeat(3 - len) : answer;
   return answer;
 }
+
+solution("...!@BaT#*..y.abcdefghijklm");
