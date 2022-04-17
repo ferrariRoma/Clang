@@ -1,6 +1,6 @@
 function solution(arr) {
   const crude = [...arr];
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 1; i < arr.length; i++) {
     for (let j = 0; j < arr.length; j++) {
       if (crude[i] < crude[j]) {
         const temp = crude[i];
