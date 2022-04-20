@@ -1,16 +1,17 @@
 function solution(arr) {
-  const crude = [...arr];
-  for (let i = 1; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-      if (crude[i] < crude[j]) {
-        const temp = crude[i];
-        crude[i] = crude[j];
-        crude[j] = temp;
-      }
+  const length = arr.length;
+  let i, j, temp;
+  for (i = 1; i < length; i++) {
+    temp = arr[i];
+    // 앞쪽부터 차곡차곡 정렬한다는 것을 잊지말자.
+    // 해당되는 요소에만, 진행을 해준다.
+    for (j = i - 1; j >= 0 && temp < arr[j]; j--) {
+      arr[j + 1] = arr[j];
     }
+    arr[j + 1] = temp;
   }
-  const answer = crude;
-  console.log(answer);
+  console.log(arr);
+  const answer = arr;
   return answer;
 }
 solution([5, 6, 1, 2, 4, 3]);

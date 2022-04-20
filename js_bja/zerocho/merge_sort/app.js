@@ -1,24 +1,26 @@
 const mergeSort = (arr) => {
-  if (arr.length < 2) return arr;
-  const pivot = Math.floor(arr.length / 2);
-  const leftArr = arr.slice(0, pivot);
-  const rightArr = arr.slice(pivot, arr.length);
-  return merge(mergeSort(leftArr), mergeSort(rightArr));
+  const length = arr.length;
+  if (length < 2) return arr;
+  const pivot = Math.floor(length / 2);
+  const left = arr.slice(0, pivot);
+  const right = arr.slice(pivot, length);
+  // 이중 반복문을 쓰지 않는 버블정렬, 삽입정렬, 선택정렬과는 다르게
+  // 재귀함수를 통해서 진행하기 때문에 성능이 가장 좋다.
+  return merge(mergeSort(left), mergeSort(right));
 };
 
-function merge(left, right) {
+function merge(leftArr, rightArr) {
   const answer = [];
-  // 둘 다 길이가 0이 아닐때
-  while (left.length && right.length) {
-    if (left[0] <= right[0]) {
-      answer.push(left.shift());
+  // const left = leftArr.length을 하면 안된다.
+  while (leftArr.length && rightArr.length) {
+    if (leftArr[0] >= rightArr[0]) {
+      answer.push(rightArr.shift());
     } else {
-      answer.push(right.shift());
+      answer.push(leftArr.shift());
     }
   }
-  // 하나가 0되고 나면 남은거 다 넣어주기.
-  while (left.length) answer.push(left.shift());
-  while (right.length) answer.push(right.shift());
+  while (leftArr.length) answer.push(leftArr.shift());
+  while (rightArr.length) answer.push(rightArr.shift());
   return answer;
 }
 
