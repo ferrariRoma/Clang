@@ -1,4 +1,4 @@
-const mergeSort = (arr) => {
+/* const mergeSort = (arr) => {
   const length = arr.length;
   if (length < 2) return arr;
   const pivot = Math.floor(length / 2);
@@ -23,5 +23,29 @@ function merge(leftArr, rightArr) {
   while (rightArr.length) answer.push(rightArr.shift());
   return answer;
 }
+
+console.log(mergeSort([5, 2, 4, 7, 6, 1, 3, 8]));
+ */
+const mergeSort = (arr) => {
+  if (arr.length < 2) return arr;
+  const pivot = Math.floor(arr.length / 2);
+  const leftArr = arr.slice(0, pivot);
+  const rightArr = arr.slice(pivot, arr.length);
+  return merge(mergeSort(leftArr), mergeSort(rightArr));
+};
+
+const merge = (leftArr, rightArr) => {
+  const result = [];
+  while (leftArr.length && rightArr.length) {
+    if (leftArr[0] >= rightArr[0]) {
+      result.push(rightArr.shift());
+    } else {
+      result.push(leftArr.shift());
+    }
+  }
+  while (leftArr.length) result.push(leftArr.shift());
+  while (rightArr.length) result.push(rightArr.shift());
+  return result;
+};
 
 console.log(mergeSort([5, 2, 4, 7, 6, 1, 3, 8]));
