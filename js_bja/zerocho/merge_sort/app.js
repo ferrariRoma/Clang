@@ -26,26 +26,27 @@ function merge(leftArr, rightArr) {
 
 console.log(mergeSort([5, 2, 4, 7, 6, 1, 3, 8]));
  */
+
 const mergeSort = (arr) => {
   const length = arr.length;
   if(length<2) return arr;
   const pivot = Math.floor(length/2);
-  const left = arr.slice(0,pivot);
-  const right = arr.slice(pivot,length);
-  return merge(mergeSort(left),mergeSort(right));
+  const left = arr.slice(0, pivot);
+  const right = arr.slice(pivot, length);
+  return merge(mergeSort(left), mergeSort(right));
 }
 
-const merge = (left,right) => {
+const merge = (left, right) => {
   const result = [];
-  while(left.length && right.length){
+  while(left.length && right.length) {
     if(left[0]>=right[0]){
       result.push(right.shift());
     } else {
       result.push(left.shift());
     }
   }
-  while(right.length) result.push(right.shift());
   while(left.length) result.push(left.shift());
+  while(right.length) result.push(right.shift());
   return result;
 }
 

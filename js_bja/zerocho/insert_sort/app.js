@@ -20,7 +20,7 @@
 } */
 
 // 3차 복습
-function solution(arr) {
+/* function solution(arr) {
   let temp, j;
   for (let i = 1; i < arr.length; i++) {
     temp = arr[i];
@@ -31,4 +31,19 @@ function solution(arr) {
   }
   console.log(arr);
 }
-solution([5, 6, 1, 2, 4, 3]);
+solution([5, 6, 1, 2, 4, 3]); */
+
+// 4차 복습
+function solution(arr) {
+  for(let i=1; i<arr.length; i++){
+    const pivot = arr[i];
+    let j;
+    for(j=i-1; j>=0&&pivot<arr[j]; j--){
+      arr[j+1] = arr[j];
+    }
+    arr[j+1] = pivot;
+  }
+  return arr;
+}
+
+console.log(solution([5,6,1,2,4,3]));
