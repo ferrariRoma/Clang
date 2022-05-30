@@ -48,49 +48,33 @@ const quickSort = (array, left, right) => {
 console.log(quickSort([4, 1, 7, 6, 3, 8, 2, 5]));
  */
 
-const partition = (arr, left, right, pivotIndex) => {
+// 4차 복습
+function partition(arr, left, right, pivotIndex) {
   let temp;
   const pivot = arr[pivotIndex];
-  // 최소기준 설정
   while (left <= right) {
-    // 기준보다 왼쪽이 클 때, 오른쪽이 작을 때
-    while (arr[left] < pivot) {
-      left++;
-    }
-    while (arr[right] > pivot) {
-      right--;
-    }
-    // 그때 좌우 교체
+    while (arr[left] < pivot) left++;
+    while (arr[right] > pivot) right--;
     if (left <= right) {
-      temp = arr[right];
-      arr[right] = arr[left];
-      arr[left] = temp;
+      temp = arr[left];
+      arr[left] = arr[right];
+      arr[right] = temp;
     }
   }
-  //
   temp = arr[pivotIndex];
   arr[pivotIndex] = arr[left];
   arr[left] = temp;
   return left;
-};
+}
 
-const quickSort = (arr, left, right) => {
-  // 초기 설정
+function quickSort(arr, left, right) {
   if (!left) left = 0;
   if (!right) right = arr.length - 1;
-  // 기준 설정
   let pivotIndex = right;
-  // 정렬하기
-  // 정렬 결과로는 왼쪽 기준값을 가지고 와야 한다.
   pivotIndex = partition(arr, left, right - 1, pivotIndex);
-  // 재귀하기
-  if (left < pivotIndex - 1) {
-    quickSort(arr, left, pivotIndex - 1);
-  }
-  if (pivotIndex + 1 < right) {
-    quickSort(arr, pivotIndex + 1, right);
-  }
+  if (left < pivotIndex - 1) quickSort(arr, left, pivotIndex - 1);
+  if (right > pivotIndex + 1) quickSort(arr, pivotIndex + 1, right);
   return arr;
-};
+}
 
 console.log(quickSort([4, 1, 7, 6, 3, 8, 2, 5]));
