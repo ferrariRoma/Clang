@@ -18,10 +18,9 @@
     arr[i] = temp; // 최솟값을 앞쪽으로 저장
   }
   return arr;
-};
+}; */
 
-console.log(selection([5, 1, 4, 7, 2, 6, 8, 3])); */
-const selection = (arr) => {
+/* const selection = (arr) => {
   for (let i = 0; i < arr.length - 1; i++) {
     let min = i;
     for (let j = i + 1; j < arr.length; j++) {
@@ -34,5 +33,22 @@ const selection = (arr) => {
     arr[i] = temp;
   }
   return arr;
-};
+}; */
+
+// 4차 복습
+function selection(arr) {
+  const length = arr.length;
+  for (let i = 0; i < length - 1; i++) {
+    let min = i;
+    for (let j = i + 1; j < length; j++) {
+      if (arr[min] > arr[j]) {
+        min = j;
+      }
+    }
+    let temp = arr[i];
+    arr[i] = arr[min];
+    arr[min] = temp;
+  }
+  return arr;
+}
 console.log(selection([5, 1, 4, 7, 2, 6, 8, 3]));
