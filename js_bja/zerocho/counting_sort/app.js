@@ -48,31 +48,7 @@
   return result;
 } */
 
-/* function countingSort(arr, k) {
-  let result = [], count;
-  // 1단계 count초기화
-  count = new Array(k[0]+1).fill(0);
-  console.log("1단계 초기화 결과: ", count)
-
-  // 2단계 카운트 하기
-  for(let i = 0; i<arr.length; i++){
-    count[arr[i]] += 1; 
-  }
-  console.log("2단계 count: ", count);
-
-  // 3단계 종합하기
-  for(i=0; i<k; i++){
-    count[i+1] +=count[i];
-  }
-  console.log("3단계 다 더하기: ", count);
-
-  for(i = 0; i<arr.length; i++){
-    result[count[arr[i]] - 1] = arr[i];
-    count[arr[i]] -= 1;
-  }
-  return result;
-} */
-
+// 3차 복습
 function countingSort(arr, k) {
   let result = [],
     count;
