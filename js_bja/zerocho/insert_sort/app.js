@@ -20,7 +20,7 @@
 } */
 
 // 4차 복습
-function insertSort(arr) {
+/* function insertSort(arr) {
   let temp, i, j;
   for (i = 1; i < arr.length; i++) {
     temp = arr[i];
@@ -31,4 +31,19 @@ function insertSort(arr) {
   }
   return arr;
 }
-console.log(insertSort([5, 6, 1, 2, 4, 3]));
+console.log(insertSort([5, 6, 1, 2, 4, 3])); */
+
+const arr = new Array(3).fill(new Array(3).fill(0));
+
+arr[0][1] = 10;
+console.log(arr);
+
+// 위에는 모든 요소의 [1]에 10이 할당되고
+// 아래는 첫번째 요소의 [1]에만 10이 할당된다.
+
+const arr2 = Array.from(new Array(3), () => {
+  return new Array(3).fill(0);
+});
+
+arr2[0][1] = 10;
+console.log(arr2);
