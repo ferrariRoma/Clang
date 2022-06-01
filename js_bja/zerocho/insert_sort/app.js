@@ -19,17 +19,16 @@
   return answer;
 } */
 
-
 // 4차 복습
-function solution(arr){
-  let i,j, temp;
-  for(i=1;i<arr.length;i++){
+function insertSort(arr) {
+  let temp, i, j;
+  for (i = 1; i < arr.length; i++) {
     temp = arr[i];
-    for(j=i-1;j>=0 && temp<arr[j]; j--){
-      arr[j+1] = arr[j];
+    for (j = i - 1; j >= 0 && arr[j] > temp; j--) {
+      arr[j + 1] = arr[j];
     }
-    arr[j+1] =temp;
+    arr[j + 1] = temp;
   }
   return arr;
 }
-console.log(solution([5,6,1,2,4,3]));
+console.log(insertSort([5, 6, 1, 2, 4, 3]));
